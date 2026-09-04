@@ -2,11 +2,18 @@ using Microsoft.EntityFrameworkCore;
 using NexaGrid.API.Data;
 using NexaGrid.API.Repositories;
 using NexaGrid.API.Services;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Register API controllers.
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(
+            new JsonStringEnumConverter());
+    });
 
 // Register the NexaGrid SQL Server database.
 builder.Services.AddDbContext<NexaGridDbContext>(options =>
@@ -16,6 +23,14 @@ builder.Services.AddDbContext<NexaGridDbContext>(options =>
             
 builder.Services.AddScoped<ISensorRepository, SensorRepository>();
 builder.Services.AddScoped<ISensorService, SensorService>();
+
+builder.Services.AddScoped<
+    ITelemetryRepository,
+    TelemetryRepository>();
+
+builder.Services.AddScoped<
+    ITelemetryService,
+    TelemetryService>();
 
 // Allow the Windows Forms application to communicate with the API.
 builder.Services.AddCors(options =>
