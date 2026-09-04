@@ -1,0 +1,6 @@
+@NexaGrid.API_HostAddress = http://localhost:5211
+
+GET {{NexaGrid.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
