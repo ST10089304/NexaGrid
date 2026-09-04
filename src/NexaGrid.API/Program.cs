@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using NexaGrid.API.Data;
+using NexaGrid.API.Repositories;
+using NexaGrid.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,9 @@ builder.Services.AddDbContext<NexaGridDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString(
             "NexaGridDatabase")));
+            
+builder.Services.AddScoped<ISensorRepository, SensorRepository>();
+builder.Services.AddScoped<ISensorService, SensorService>();
 
 // Allow the Windows Forms application to communicate with the API.
 builder.Services.AddCors(options =>
