@@ -1,16 +1,29 @@
+using NexaGrid.Desktop.Forms;
+
 namespace NexaGrid.Desktop;
 
-static class Program
+internal static class Program
 {
-    /// <summary>
-    ///  The main entry point for the application.
-    /// </summary>
     [STAThread]
-    static void Main()
+    private static void Main()
     {
-        // To customize application configuration such as set high DPI settings or default font,
-        // see https://aka.ms/applicationconfiguration.
-        ApplicationConfiguration.Initialize();
-        Application.Run(new Form1());
-    }    
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+
+        try
+        {
+            using var mainForm =
+                new MainForm();
+
+            Application.Run(mainForm);
+        }
+        catch (Exception exception)
+        {
+            MessageBox.Show(
+                exception.ToString(),
+                "NexaGrid startup error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+    }
 }
