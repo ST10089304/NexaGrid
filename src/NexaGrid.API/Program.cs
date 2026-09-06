@@ -1,110 +1,130 @@
 using System.Text.Json.Serialization;
+
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
+
 using NexaGrid.API.Data;
 using NexaGrid.API.Repositories;
 using NexaGrid.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure controllers and readable enum values.
+// =========================================================
+// Controllers and JSON
+// =========================================================
+
 builder.Services
     .AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(
             new JsonStringEnumConverter());
+
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive =
+            true;
     });
 
-// Configure the NexaGrid SQL Server database.
-builder.Services.AddDbContext<NexaGridDbContext>(options =>
-{
-    string connectionString =
-        builder.Configuration.GetConnectionString(
-            "NexaGridDatabase")
-        ?? throw new InvalidOperationException(
-            "The NexaGrid database connection string is missing.");
+// =========================================================
+// SQL Server database
+// =========================================================
 
-    options.UseSqlServer(connectionString);
-});
+string connectionString =
+    builder.Configuration.GetConnectionString(
+        "NexaGridDatabase")
+    ?? throw new InvalidOperationException(
+        "The NexaGridDatabase connection string was not found.");
 
-// Register sensor functionality.
+builder.Services.AddDbContext<NexaGridDbContext>(
+    options =>
+    {
+        options.UseSqlServer(connectionString);
+    });
+
+// =========================================================
+// Repository registrations
+// =========================================================
+
 builder.Services.AddScoped<
     ISensorRepository,
     SensorRepository>();
 
 builder.Services.AddScoped<
-    ISensorService,
-    SensorService>();
-
-// Register telemetry functionality.
-builder.Services.AddScoped<
     ITelemetryRepository,
     TelemetryRepository>();
+
+builder.Services.AddScoped<
+    IAttachmentRepository,
+    AttachmentRepository>();
+
+// =========================================================
+// Service registrations
+// =========================================================
+
+builder.Services.AddScoped<
+    ISensorService,
+    SensorService>();
 
 builder.Services.AddScoped<
     ITelemetryService,
     TelemetryService>();
 
-// Register sensor-attachment functionality.
-builder.Services.AddScoped<
-    IAttachmentRepository,
-    AttachmentRepository>();
-
 builder.Services.AddScoped<
     IAttachmentService,
     AttachmentService>();
 
-// Limit multipart uploads to 10 MB.
-builder.Services.Configure<FormOptions>(options =>
-{
-    options.MultipartBodyLengthLimit =
-        10 * 1024 * 1024;
-});
+// =========================================================
+// File upload configuration
+// =========================================================
 
-// Permit the Windows Forms client to access the API.
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("NexaGridClient", policy =>
+const long maximumUploadSize =
+    10L * 1024L * 1024L;
+
+builder.Services.Configure<FormOptions>(
+    options =>
     {
-        policy
-            .AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        options.MultipartBodyLengthLimit =
+            maximumUploadSize;
     });
-});
 
-// Register OpenAPI documentation.
+// =========================================================
+// OpenAPI documentation
+// =========================================================
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+// =========================================================
+// HTTP request pipeline
+// =========================================================
 
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-app.UseCors("NexaGridClient");
+app.UseHttpsRedirection();
 
 app.MapControllers();
 
-// General API health endpoint.
-app.MapGet("/api/health", () =>
-{
-    return Results.Ok(new
-    {
-        success = true,
-        service = "NexaGrid API",
-               status = "Healthy",
-        version = "1.0.0",
-        timestampUtc = DateTime.UtcNow
-    });
-})
-.WithName("GetApiHealth");
+// =========================================================
+// Health endpoint
+// =========================================================
+
+app.MapGet(
+        "/api/health",
+        () =>
+        {
+            return Results.Ok(
+                new
+                {
+                    success = true,
+                    service = "NexaGrid API",
+                    status = "Healthy",
+                    version = "1.0.0",
+                    timestampUtc = DateTime.UtcNow
+                });
+        })
+    .WithName("GetApiHealth");
 
 app.Run();
-
-// Required by the API integration-test project.
-public partial class Program
-{
-}
