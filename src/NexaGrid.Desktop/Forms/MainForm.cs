@@ -1,27 +1,46 @@
-using FontAwesome.Sharp;
+﻿using FontAwesome.Sharp;
+
 using NexaGrid.Desktop.Controls;
+using NexaGrid.Desktop.Services;
 using NexaGrid.Desktop.Theme;
 
 namespace NexaGrid.Desktop.Forms;
 
-public class MainForm : Form
+public sealed class MainForm : Form
 {
     private readonly Panel _pageHost;
+    private readonly ApiClient _apiClient;
+
     private Label _apiStatusLabel = null!;
+    private Button _attachmentsButton = null!;
+    private bool _workspaceIsOpen;
 
     public MainForm()
     {
-        Text = "NexaGrid IoT Operations Platform";
+        _apiClient =
+            new ApiClient();
+
+        AutoScaleMode =
+            AutoScaleMode.Dpi;
+
+        Text =
+            "NexaGrid IoT Operations Platform";
+
         StartPosition =
             FormStartPosition.CenterScreen;
+
         MinimumSize =
-            new Size(1180, 760);
+            new Size(1280, 800);
+
         Size =
             new Size(1440, 880);
+
         BackColor =
             AppPalette.Background;
+
         ForeColor =
             AppPalette.Black;
+
         Font =
             AppFonts.Body;
 
@@ -87,7 +106,16 @@ public class MainForm : Form
             0,
             3);
 
-        Controls.Add(rootLayout);
+        Controls.Add(
+            rootLayout);
+
+        Shown +=
+            async (_, _) =>
+                await CheckApiStatusAsync();
+
+        FormClosed +=
+            (_, _) =>
+                _apiClient.Dispose();
 
         ShowGatewayPage();
     }
@@ -98,8 +126,10 @@ public class MainForm : Form
             new Panel
             {
                 Dock = DockStyle.Fill,
-                BackColor = AppPalette.Black,
-                Margin = Padding.Empty
+                BackColor =
+                    AppPalette.Black,
+                Margin =
+                    Padding.Empty
             };
 
         var leftLabel =
@@ -133,22 +163,26 @@ public class MainForm : Form
                         FontStyle.Regular),
                 AutoSize = true,
                 Anchor =
-                    AnchorStyles.Top |
-                    AnchorStyles.Right
+                    AnchorStyles.Top
+                    | AnchorStyles.Right
             };
 
-        panel.Controls.Add(leftLabel);
-        panel.Controls.Add(rightLabel);
+        panel.Controls.Add(
+            leftLabel);
 
-        panel.Resize += (_, _) =>
-        {
-            rightLabel.Location =
-                new Point(
-                    panel.ClientSize.Width -
-                    rightLabel.Width -
-                    38,
-                    8);
-        };
+        panel.Controls.Add(
+            rightLabel);
+
+        panel.Resize +=
+            (_, _) =>
+            {
+                rightLabel.Location =
+                    new Point(
+                        panel.ClientSize.Width
+                        - rightLabel.Width
+                        - 38,
+                        8);
+            };
 
         return panel;
     }
@@ -170,33 +204,27 @@ public class MainForm : Form
                 "GATEWAY",
                 42);
 
-        gatewayButton.Click += (_, _) =>
-        {
-            ShowGatewayPage();
-        };
+        gatewayButton.Click +=
+            (_, _) =>
+                ShowGatewayPage();
 
         Button sensorsButton =
             CreateNavigationButton(
                 "SENSORS",
                 130);
 
-        sensorsButton.Click += (_, _) =>
-        {
-            OpenSensorWorkspace();
-        };
+        sensorsButton.Click +=
+            (_, _) =>
+                OpenSensorWorkspace();
 
         Button telemetryButton =
             CreateNavigationButton(
                 "TELEMETRY",
                 215);
 
-        telemetryButton.Click += (_, _) =>
-        {
-            ShowFeaturePage(
-                "TELEMETRY",
-                "REAL-TIME READINGS AND ANOMALY MONITORING",
-                "Submit strongly typed sensor readings, inspect historical data and identify anomalies.");
-        };
+        telemetryButton.Click +=
+            (_, _) =>
+                OpenTelemetryWorkspace();
 
         var brandButton =
             new Button
@@ -211,7 +239,8 @@ public class MainForm : Form
                 FlatStyle =
                     FlatStyle.Flat,
                 AutoSize = true,
-                Cursor = Cursors.Hand,
+                Cursor =
+                    Cursors.Hand,
                 Anchor =
                     AnchorStyles.Top,
                 Location =
@@ -222,67 +251,68 @@ public class MainForm : Form
 
         brandButton.FlatAppearance.BorderSize = 0;
 
-        brandButton.Click += (_, _) =>
-        {
-            ShowGatewayPage();
-        };
+        brandButton.Click +=
+            (_, _) =>
+                ShowGatewayPage();
 
-        Button attachmentsButton =
+        _attachmentsButton =
             CreateNavigationButton(
                 "ATTACHMENTS",
                 0);
 
-        attachmentsButton.Anchor =
-            AnchorStyles.Top |
-            AnchorStyles.Right;
+        _attachmentsButton.Anchor =
+            AnchorStyles.Top
+            | AnchorStyles.Right;
 
-        attachmentsButton.Click += (_, _) =>
-        {
-            ShowFeaturePage(
-                "ATTACHMENTS",
-                "SENSOR FILES AND DEPLOYMENT EVIDENCE",
-                "Upload and retrieve configuration files, deployment photographs and hardware logs.");
-        };
+        _attachmentsButton.Click +=
+            (_, _) =>
+                ShowAttachmentIntroduction();
 
         _apiStatusLabel =
             new Label
             {
-                Text = "API  ●",
+                Text = "API CHECKING",
                 ForeColor =
                     AppPalette.DarkGray,
                 Font =
                     AppFonts.Uppercase,
                 AutoSize = true,
                 Anchor =
-                    AnchorStyles.Top |
-                    AnchorStyles.Right
+                    AnchorStyles.Top
+                    | AnchorStyles.Right
             };
 
-        panel.Controls.Add(gatewayButton);
-        panel.Controls.Add(sensorsButton);
-        panel.Controls.Add(telemetryButton);
-        panel.Controls.Add(brandButton);
-        panel.Controls.Add(attachmentsButton);
-        panel.Controls.Add(_apiStatusLabel);
+        panel.Controls.Add(
+            gatewayButton);
 
-        panel.Resize += (_, _) =>
-        {
-            brandButton.Left =
-                (panel.ClientSize.Width -
-                 brandButton.Width) / 2;
+        panel.Controls.Add(
+            sensorsButton);
 
-            attachmentsButton.Location =
-                new Point(
-                    panel.ClientSize.Width -
-                    attachmentsButton.Width -
-                    115,
-                    24);
+        panel.Controls.Add(
+            telemetryButton);
 
-            _apiStatusLabel.Location =
-                new Point(
-                    panel.ClientSize.Width - 75,
-                    36);
-        };
+        panel.Controls.Add(
+            brandButton);
+
+        panel.Controls.Add(
+            _attachmentsButton);
+
+        panel.Controls.Add(
+            _apiStatusLabel);
+
+        panel.Resize +=
+            (_, _) =>
+            {
+                brandButton.Left =
+                    (panel.ClientSize.Width
+                     - brandButton.Width) / 2;
+
+                PositionHeaderActions();
+            };
+
+        _apiStatusLabel.TextChanged +=
+            (_, _) =>
+                PositionHeaderActions();
 
         return panel;
     }
@@ -306,7 +336,8 @@ public class MainForm : Form
                 AutoSize = true,
                 Location =
                     new Point(left, 24),
-                Cursor = Cursors.Hand,
+                Cursor =
+                    Cursors.Hand,
                 UseVisualStyleBackColor =
                     false
             };
@@ -346,7 +377,7 @@ public class MainForm : Form
         gatewayLayout.RowStyles.Add(
             new RowStyle(
                 SizeType.Absolute,
-                195));
+                230));
 
         gatewayLayout.Controls.Add(
             BuildHero(),
@@ -439,22 +470,23 @@ public class MainForm : Form
             new Label
             {
                 Text =
-                    "A precise operational layer for connected devices,\n" +
-                    "sensor telemetry and distributed environments.",
+                    "A precise operational layer for connected devices,"
+                    + Environment.NewLine
+                    + "sensor telemetry and distributed environments.",
                 ForeColor =
                     AppPalette.DarkGray,
                 Font =
                     AppFonts.Body,
                 AutoSize = true,
                 Location =
-                    new Point(5, 245)
+                    new Point(5, 285)
             };
 
         var enterButton =
             new Button
             {
                 Text =
-                    "ENTER SENSOR GATEWAY  →",
+                    "ENTER SENSOR GATEWAY",
                 BackColor =
                     AppPalette.Black,
                 ForeColor =
@@ -466,7 +498,7 @@ public class MainForm : Form
                 Size =
                     new Size(220, 44),
                 Location =
-                    new Point(5, 310),
+                    new Point(5, 345),
                 Cursor =
                     Cursors.Hand,
                 UseVisualStyleBackColor =
@@ -478,10 +510,9 @@ public class MainForm : Form
         enterButton.FlatAppearance.MouseOverBackColor =
             AppPalette.DarkGray;
 
-        enterButton.Click += (_, _) =>
-        {
-            OpenSensorWorkspace();
-        };
+        enterButton.Click +=
+            (_, _) =>
+                OpenSensorWorkspace();
 
         copyPanel.Controls.Add(
             eyebrowLabel);
@@ -494,6 +525,24 @@ public class MainForm : Form
 
         copyPanel.Controls.Add(
             enterButton);
+
+        copyPanel.Resize +=
+            (_, _) =>
+            {
+                int buttonTop =
+                    Math.Min(
+                        345,
+                        Math.Max(
+                            300,
+                            copyPanel.ClientSize.Height - 50));
+
+                descriptionLabel.Top =
+                    Math.Min(
+                        285,
+                        buttonTop - 60);
+
+                enterButton.Top = buttonTop;
+            };
 
         var networkVisual =
             new NetworkHeroVisual
@@ -517,7 +566,8 @@ public class MainForm : Form
             1,
             0);
 
-        hero.Controls.Add(layout);
+        hero.Controls.Add(
+            layout);
 
         return hero;
     }
@@ -535,10 +585,11 @@ public class MainForm : Form
                 Padding =
                     new Padding(
                         45,
-                        10,
+                        14,
                         45,
-                        10),
-                Margin = Padding.Empty
+                        14),
+                Margin =
+                    Padding.Empty
             };
 
         table.ColumnStyles.Add(
@@ -577,10 +628,9 @@ public class MainForm : Form
                         0)
             };
 
-        ingestionCard.OpenRequested += (_, _) =>
-        {
-            OpenSensorWorkspace();
-        };
+        ingestionCard.OpenRequested +=
+            (_, _) =>
+                OpenSensorWorkspace();
 
         var commandCard =
             new PillarCard(
@@ -634,10 +684,48 @@ public class MainForm : Form
 
     private void OpenSensorWorkspace()
     {
-        using var sensorWorkspace =
-            new SensorWorkspaceForm();
+        OpenWorkspace(
+            () => new SensorWorkspaceForm());
+    }
 
-        sensorWorkspace.ShowDialog(this);
+    private void OpenTelemetryWorkspace()
+    {
+        OpenWorkspace(
+            () => new TelemetryWorkspaceForm());
+    }
+
+    private void OpenWorkspace(
+        Func<Form> createWorkspace)
+    {
+        if (_workspaceIsOpen)
+        {
+            return;
+        }
+
+        try
+        {
+            _workspaceIsOpen = true;
+
+            using Form workspace =
+                createWorkspace();
+
+            workspace.ShowDialog(this);
+        }
+        finally
+        {
+            _workspaceIsOpen = false;
+
+            _ =
+                CheckApiStatusAsync();
+        }
+    }
+
+    private void ShowAttachmentIntroduction()
+    {
+        ShowFeaturePage(
+            "ATTACHMENTS",
+            "SENSOR FILES AND DEPLOYMENT EVIDENCE",
+            "Upload and retrieve configuration files, deployment photographs and hardware logs.");
     }
 
     private void ShowFeaturePage(
@@ -674,7 +762,8 @@ public class MainForm : Form
         var titleLabel =
             new Label
             {
-                Text = title,
+                Text =
+                    title.ToUpperInvariant(),
                 ForeColor =
                     AppPalette.Black,
                 Font =
@@ -693,15 +782,31 @@ public class MainForm : Form
                 Font =
                     AppFonts.Body,
                 AutoSize = true,
+                MaximumSize =
+                    new Size(650, 0),
                 Location =
-                    new Point(55, 130)
+                    new Point(55, 140)
+            };
+
+        var statusLabel =
+            new Label
+            {
+                Text =
+                    "WORKSPACE INTERFACE PENDING",
+                ForeColor =
+                    AppPalette.DarkGray,
+                Font =
+                    AppFonts.Uppercase,
+                AutoSize = true,
+                Location =
+                    new Point(55, 210)
             };
 
         var backButton =
             new Button
             {
                 Text =
-                    "←  BACK TO GATEWAY",
+                    "RETURN TO GATEWAY",
                 BackColor =
                     AppPalette.Black,
                 ForeColor =
@@ -711,9 +816,9 @@ public class MainForm : Form
                 Font =
                     AppFonts.Button,
                 Size =
-                    new Size(180, 42),
+                    new Size(205, 42),
                 Location =
-                    new Point(55, 200),
+                    new Point(55, 260),
                 Cursor =
                     Cursors.Hand,
                 UseVisualStyleBackColor =
@@ -722,10 +827,9 @@ public class MainForm : Form
 
         backButton.FlatAppearance.BorderSize = 0;
 
-        backButton.Click += (_, _) =>
-        {
-            ShowGatewayPage();
-        };
+        backButton.Click +=
+            (_, _) =>
+                ShowGatewayPage();
 
         panel.Controls.Add(
             subtitleLabel);
@@ -737,9 +841,13 @@ public class MainForm : Form
             descriptionLabel);
 
         panel.Controls.Add(
+            statusLabel);
+
+        panel.Controls.Add(
             backButton);
 
-        _pageHost.Controls.Add(panel);
+        _pageHost.Controls.Add(
+            panel);
     }
 
     private static Panel BuildFooter()
@@ -749,39 +857,174 @@ public class MainForm : Form
             {
                 Dock = DockStyle.Fill,
                 BackColor =
-                    AppPalette.Background
+                    AppPalette.Background,
+                Padding =
+                    new Padding(
+                        45,
+                        8,
+                        45,
+                        8),
+                Margin =
+                    Padding.Empty
             };
 
-        string[] items =
-        [
-            "01  STRONGLY TYPED DATA",
-            "02  ANOMALY DETECTION",
-            "03  SQL PERSISTENCE",
-            "04  SECURE ATTACHMENTS"
-        ];
+        var topBorder =
+            new Panel
+            {
+                Dock = DockStyle.Top,
+                Height = 5,
+                BackColor =
+                    AppPalette.Black
+            };
+
+        var featureLayout =
+            new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                ColumnCount = 4,
+                RowCount = 1,
+                BackColor =
+                    AppPalette.Background,
+                Padding =
+                    new Padding(0, 8, 0, 0)
+            };
 
         for (int index = 0;
-             index < items.Length;
+             index < 4;
              index++)
         {
-            var label =
-                new Label
-                {
-                    Text = items[index],
-                    ForeColor =
-                        AppPalette.Black,
-                    Font =
-                        AppFonts.Uppercase,
-                    AutoSize = true,
-                    Location =
-                        new Point(
-                            55 + index * 320,
-                            25)
-                };
-
-            footer.Controls.Add(label);
+            featureLayout.ColumnStyles.Add(
+                new ColumnStyle(
+                    SizeType.Percent,
+                    25));
         }
 
+        featureLayout.Controls.Add(
+            CreateFooterLabel(
+                "01  STRONGLY TYPED DATA"),
+            0,
+            0);
+
+        featureLayout.Controls.Add(
+            CreateFooterLabel(
+                "02  ANOMALY DETECTION"),
+            1,
+            0);
+
+        featureLayout.Controls.Add(
+            CreateFooterLabel(
+                "03  SQL PERSISTENCE"),
+            2,
+            0);
+
+        featureLayout.Controls.Add(
+            CreateFooterLabel(
+                "04  SECURE ATTACHMENTS"),
+            3,
+            0);
+
+        footer.Controls.Add(
+            featureLayout);
+
+        footer.Controls.Add(
+            topBorder);
+
         return footer;
+    }
+
+    private static Label CreateFooterLabel(
+        string text)
+    {
+        return new Label
+        {
+            Dock = DockStyle.Fill,
+            Text = text,
+            TextAlign =
+                ContentAlignment.TopLeft,
+            ForeColor =
+                AppPalette.Black,
+            Font =
+                new Font(
+                    "Segoe UI",
+                    7,
+                    FontStyle.Bold),
+            AutoSize = false
+        };
+    }
+
+    private async Task CheckApiStatusAsync()
+    {
+        try
+        {
+            bool healthy =
+                await _apiClient.IsHealthyAsync();
+
+            if (IsDisposed)
+            {
+                return;
+            }
+
+            _apiStatusLabel.Text =
+                healthy
+                    ? "API ONLINE"
+                    : "API OFFLINE";
+
+            _apiStatusLabel.ForeColor =
+                healthy
+                    ? Color.FromArgb(
+                        48,
+                        104,
+                        70)
+                    : Color.FromArgb(
+                        174,
+                        54,
+                        42);
+
+            PositionApiStatusLabel();
+        }
+        catch
+        {
+            if (!IsDisposed)
+            {
+                _apiStatusLabel.Text =
+                    "API OFFLINE";
+
+                _apiStatusLabel.ForeColor =
+                    Color.FromArgb(
+                        174,
+                        54,
+                        42);
+
+                PositionApiStatusLabel();
+            }
+        }
+    }
+
+    private void PositionApiStatusLabel()
+    {
+        PositionHeaderActions();
+    }
+
+    private void PositionHeaderActions()
+    {
+        if (_apiStatusLabel.Parent is not Control parent
+            || _attachmentsButton is null)
+        {
+            return;
+        }
+
+        _apiStatusLabel.Location =
+            new Point(
+                parent.ClientSize.Width
+                - _apiStatusLabel.Width
+                - 38,
+                36);
+
+        _attachmentsButton.Location =
+            new Point(
+                _apiStatusLabel.Left
+                - _attachmentsButton.Width
+                - 28,
+                24);
     }
 }
