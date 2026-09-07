@@ -5,7 +5,7 @@ using NexaGrid.Desktop.Controls;
 using NexaGrid.Desktop.Services;
 using NexaGrid.Shared.DTOs;
 using NexaGrid.Shared.Enums;
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
 namespace NexaGrid.Desktop.Forms;
 
 public sealed class TelemetryWorkspaceForm : Form
@@ -62,7 +62,7 @@ public sealed class TelemetryWorkspaceForm : Form
     private readonly TelemetryChartControl _chart;
 
     private bool _isBusy;
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     public TelemetryWorkspaceForm()
     {
         _apiClient = new ApiClient();
@@ -220,7 +220,7 @@ public sealed class TelemetryWorkspaceForm : Form
         ConfigureInputs();
         ConnectEvents();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void BuildInterface()
     {
         var root =
@@ -265,7 +265,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         Controls.Add(root);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildTopStrip()
     {
         var panel =
@@ -296,7 +296,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return panel;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildHeader()
     {
         var layout =
@@ -380,7 +380,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return layout;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildWorkspace()
     {
         var layout =
@@ -415,7 +415,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return layout;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildInputPanel()
     {
         var border =
@@ -548,7 +548,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return border;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildResultsPanel()
     {
         var border =
@@ -626,7 +626,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return border;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildResultsToolbar()
     {
         var layout =
@@ -670,7 +670,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return layout;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Control BuildSectionHeading(
         string text)
     {
@@ -694,7 +694,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return label;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void ConfigureInputs()
     {
         _dataTypeComboBox.DataSource =
@@ -712,7 +712,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         UpdateDataTypeFields();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void ConnectEvents()
     {
         Shown +=
@@ -743,7 +743,7 @@ public sealed class TelemetryWorkspaceForm : Form
             (_, _) =>
                 _apiClient.Dispose();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task InitialiseAsync()
     {
         await RunBusyOperationAsync(
@@ -765,7 +765,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 await LoadTelemetryAsync();
             });
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task HandleSensorSelectionChangedAsync()
     {
         if (_isBusy || IsDisposed || Disposing)
@@ -786,7 +786,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 await LoadTelemetryAsync();
             });
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task LoadSensorsAsync()
     {
         string? previousIdentifier =
@@ -829,7 +829,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 "NO SENSORS ARE REGISTERED. USE THE SENSOR REGISTRY FIRST.";
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task LoadTelemetryAsync()
     {
         string? sensorIdentifier =
@@ -853,7 +853,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         DisplayReadings(readings);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task SubmitTelemetryAsync()
     {
         await RunBusyOperationAsync(
@@ -892,7 +892,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 }
             });
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task SeedTelemetryAsync()
     {
         string? sensorIdentifier =
@@ -961,7 +961,7 @@ public sealed class TelemetryWorkspaceForm : Form
                     MessageBoxIcon.Information);
             });
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private IngestTelemetryRequest BuildTelemetryRequest()
     {
         string? sensorIdentifier =
@@ -1058,7 +1058,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 DateTime.UtcNow
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static JsonElement CreateJsonValue(
         TelemetryDataType dataType,
         string rawValue)
@@ -1082,7 +1082,7 @@ public sealed class TelemetryWorkspaceForm : Form
                     nameof(dataType))
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static float ParseFloat(
         string value)
     {
@@ -1098,7 +1098,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return result;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static int ParseInteger(
         string value)
     {
@@ -1114,7 +1114,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return result;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static bool ParseBoolean(
         string value)
     {
@@ -1128,7 +1128,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return result;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static double? ParseOptionalNumber(
         string value,
         string fieldName)
@@ -1151,7 +1151,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return result;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void DisplayReadings(
         IReadOnlyList<TelemetryResponse> readings)
     {
@@ -1220,7 +1220,7 @@ public sealed class TelemetryWorkspaceForm : Form
                     : "ALL DISPLAYED READINGS ARE WITHIN THE EXPECTED RANGE.";
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void ClearResults()
     {
         _historyGrid.Rows.Clear();
@@ -1235,6 +1235,7 @@ public sealed class TelemetryWorkspaceForm : Form
         _resultStatusLabel.Text =
             "SELECT A SENSOR TO INSPECT TELEMETRY.";
     }
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
 
     private void UpdateDataTypeFields()
     {
@@ -1274,7 +1275,7 @@ public sealed class TelemetryWorkspaceForm : Form
             _unitTextBox.Text = "Celsius";
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task RunBusyOperationAsync(
         Func<Task> operation)
     {
@@ -1344,7 +1345,7 @@ public sealed class TelemetryWorkspaceForm : Form
             SetBusyState(false);
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void SetBusyState(
         bool busy)
     {
@@ -1361,7 +1362,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         UseWaitCursor = busy;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void UpdateApiStatus(
         bool healthy)
     {
@@ -1383,7 +1384,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 ? sensor.UniqueIdentifier
                 : null;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static void ShowWarning(
         string message)
     {
@@ -1393,7 +1394,7 @@ public sealed class TelemetryWorkspaceForm : Form
             MessageBoxButtons.OK,
             MessageBoxIcon.Warning);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static TextBox CreateTextBox()
     {
         return new TextBox
@@ -1410,7 +1411,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 FontStyle.Regular)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static ComboBox CreateComboBox()
     {
         return new ComboBox
@@ -1429,7 +1430,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 FontStyle.Regular)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static NumericUpDown CreateNumericInput(
         decimal minimum,
         decimal maximum,
@@ -1453,7 +1454,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 FontStyle.Regular)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Label CreateFieldLabel(
         string text)
     {
@@ -1472,7 +1473,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 FontStyle.Bold)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Button CreatePrimaryButton(
         string text)
     {
@@ -1491,7 +1492,7 @@ public sealed class TelemetryWorkspaceForm : Form
             UseVisualStyleBackColor = false
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Button CreateSecondaryButton(
         string text)
     {
@@ -1524,7 +1525,7 @@ public sealed class TelemetryWorkspaceForm : Form
 
         return button;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Panel CreateDivider()
     {
         return new Panel
@@ -1536,7 +1537,7 @@ public sealed class TelemetryWorkspaceForm : Form
                 new Padding(0, 14, 0, 14)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static void AddField(
         TableLayoutPanel layout,
         Control label,
@@ -1559,7 +1560,7 @@ public sealed class TelemetryWorkspaceForm : Form
         input.Margin =
             new Padding(0, 0, 0, 13);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static DataGridView CreateHistoryGrid()
     {
         var grid =

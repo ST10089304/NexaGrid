@@ -4,7 +4,7 @@ using NexaGrid.Shared.Enums;
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public class SensorService : ISensorService
 {
     private readonly ISensorRepository _sensorRepository;
@@ -13,7 +13,7 @@ public class SensorService : ISensorService
     {
         _sensorRepository = sensorRepository;
     }
-
+/*CodeProject (2018)*/
     public async Task<IReadOnlyList<SensorResponse>> GetAllAsync(
         CancellationToken cancellationToken = default)
     {
@@ -24,7 +24,7 @@ public class SensorService : ISensorService
             .Select(MapToResponse)
             .ToList();
     }
-
+/*CodeProject (2018)*/
     public async Task<SensorResponse?> GetByIdAsync(
         int id,
         CancellationToken cancellationToken = default)
@@ -36,7 +36,7 @@ public class SensorService : ISensorService
 
         return sensor is null ? null : MapToResponse(sensor);
     }
-
+/*CodeProject (2018)*/
     public async Task<SensorResponse> RegisterAsync(
         RegisterSensorRequest request,
         CancellationToken cancellationToken = default)
@@ -102,7 +102,7 @@ public class SensorService : ISensorService
 
         return MapToResponse(sensor);
     }
-
+/*CodeProject (2018)*/
     private static SensorResponse MapToResponse(Sensor sensor)
     {
         return new SensorResponse

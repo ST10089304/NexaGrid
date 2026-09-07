@@ -1,5 +1,5 @@
 namespace NexaGrid.Shared.DTOs;
-
+/* OWASP Foundation (2026) */
 public class TelemetrySeedResponse
 {
     public string SensorIdentifier { get; set; } = string.Empty;

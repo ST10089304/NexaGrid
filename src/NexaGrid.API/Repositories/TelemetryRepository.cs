@@ -3,7 +3,7 @@ using NexaGrid.API.Data;
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Repositories;
-
+/*Tutlane (2020)*/
 public class TelemetryRepository : ITelemetryRepository
 {
     private readonly NexaGridDbContext _dbContext;
@@ -12,7 +12,7 @@ public class TelemetryRepository : ITelemetryRepository
     {
         _dbContext = dbContext;
     }
-
+/*Tutlane (2020)*/
     public async Task<Sensor?> GetSensorByIdentifierAsync(
         string sensorIdentifier,
         CancellationToken cancellationToken = default)
@@ -27,6 +27,8 @@ public class TelemetryRepository : ITelemetryRepository
                 cancellationToken);
     }
 
+/*Tutlane (2020)*/
+
     public async Task<TelemetryRecord?> GetByIdAsync(
         long id,
         CancellationToken cancellationToken = default)
@@ -38,7 +40,7 @@ public class TelemetryRepository : ITelemetryRepository
                 record => record.Id == id,
                 cancellationToken);
     }
-
+/*Tutlane (2020)*/
     public async Task<List<TelemetryRecord>> GetRecentAsync(
         string sensorIdentifier,
         int limit,
@@ -58,7 +60,7 @@ public class TelemetryRepository : ITelemetryRepository
             .Take(limit)
             .ToListAsync(cancellationToken);
     }
-
+/*Tutlane (2020)*/
     public async Task AddAsync(
         TelemetryRecord telemetryRecord,
         CancellationToken cancellationToken = default)
@@ -67,6 +69,7 @@ public class TelemetryRepository : ITelemetryRepository
             telemetryRecord,
             cancellationToken);
     }
+    /*Tutlane (2020)*/
 public async Task AddRangeAsync(
     IEnumerable<TelemetryRecord> telemetryRecords,
     CancellationToken cancellationToken = default)
@@ -75,6 +78,7 @@ public async Task AddRangeAsync(
         telemetryRecords,
         cancellationToken);
 }
+/*Tutlane (2020)*/
     public async Task SaveChangesAsync(
         CancellationToken cancellationToken = default)
     {

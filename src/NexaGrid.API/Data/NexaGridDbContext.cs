@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Data;
-
+/*(Stack Overflow Community, 2018; Stack Overflow Community, 2020).*/
 public class NexaGridDbContext : DbContext
 {
     public NexaGridDbContext(
@@ -20,7 +20,7 @@ public class NexaGridDbContext : DbContext
 
     public DbSet<SensorAttachment> SensorAttachments =>
         Set<SensorAttachment>();
-
+/*(Stack Overflow Community, 2018; Stack Overflow Community, 2020).*/
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -86,7 +86,7 @@ public class NexaGridDbContext : DbContext
                 .HasForeignKey(record => record.SensorId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
-
+/*(Stack Overflow Community, 2018; Stack Overflow Community, 2020).*/
         modelBuilder.Entity<SensorAttachment>(entity =>
         {
             entity.HasKey(attachment => attachment.Id);

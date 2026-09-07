@@ -9,7 +9,7 @@ using NexaGrid.Shared.Models;
 using NexaGrid.Shared.Structures;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public class TelemetryService : ITelemetryService
 {
     private readonly ITelemetryRepository _telemetryRepository;
@@ -19,7 +19,7 @@ public class TelemetryService : ITelemetryService
     {
         _telemetryRepository = telemetryRepository;
     }
-
+/*CodeProject (2018)*/
     public async Task<TelemetryResponse> IngestAsync(
         IngestTelemetryRequest request,
         CancellationToken cancellationToken = default)
@@ -78,7 +78,7 @@ public class TelemetryService : ITelemetryService
             record,
             sensor.UniqueIdentifier);
     }
-
+/*CodeProject (2018)*/
     public async Task<IReadOnlyList<TelemetryResponse>> GetRecentAsync(
         string sensorIdentifier,
         int limit,
@@ -110,7 +110,7 @@ public class TelemetryService : ITelemetryService
                         ?? sensorIdentifier))
             .ToList();
     }
-
+/*CodeProject (2018)*/
     public async Task<TelemetrySeedResponse> SeedAsync(
         string sensorIdentifier,
         int count,
@@ -229,7 +229,7 @@ public class TelemetryService : ITelemetryService
             CompletedAtUtc = DateTime.UtcNow
         };
     }
-
+/*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessTypedValue(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -255,7 +255,7 @@ public class TelemetryService : ITelemetryService
                 "The telemetry data type is unsupported.")
         };
     }
-
+/*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessFloat(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -288,7 +288,7 @@ public class TelemetryService : ITelemetryService
                 CultureInfo.InvariantCulture),
             packet.IsAnomaly);
     }
-
+/*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessInteger(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -321,7 +321,7 @@ public class TelemetryService : ITelemetryService
                 CultureInfo.InvariantCulture),
             packet.IsAnomaly);
     }
-
+/*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessBoolean(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -356,7 +356,7 @@ public class TelemetryService : ITelemetryService
                 .ToLowerInvariant(),
             packet.IsAnomaly);
     }
-
+/*CodeProject (2018)*/
     private static bool IsOutsideRange(
         double value,
         double? minimum,
@@ -372,7 +372,7 @@ public class TelemetryService : ITelemetryService
 
         return belowMinimum || aboveMaximum;
     }
-
+/*CodeProject (2018)*/
     private static TelemetryResponse MapToResponse(
         TelemetryRecord record,
         string sensorIdentifier)
@@ -400,7 +400,7 @@ public class TelemetryService : ITelemetryService
             RecordedAtUtc = record.RecordedAtUtc
         };
     }
-
+/*CodeProject (2018)*/
     private readonly record struct ProcessedTelemetry(
         string StoredValue,
         bool IsAnomaly);

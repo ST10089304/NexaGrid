@@ -1,5 +1,5 @@
 namespace NexaGrid.Desktop.Theme;
-
+/*Refactoring Guru (2021) Factory and Theme Patterns in GUI Development*/
 public static class AppPalette
 {
     public static readonly Color Background =
@@ -36,6 +36,7 @@ public static class AppPalette
         Color.FromArgb(146, 48, 42);
 
     // Compatibility with existing controls.
+    /*Refactoring Guru (2021) Factory and Theme Patterns in GUI Development*/
     public static readonly Color Sidebar = Black;
     public static readonly Color Surface = Charcoal;
     public static readonly Color SurfaceLight = DarkGray;

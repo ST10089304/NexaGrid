@@ -1,5 +1,5 @@
 namespace NexaGrid.Shared.DTOs;
-
+/* OWASP Foundation (2026) */
 public class ApiResponse<T>
 {
     public bool Success { get; init; }
@@ -19,7 +19,7 @@ public class ApiResponse<T>
             Data = data
         };
     }
-
+/* OWASP Foundation (2026) */
     public static ApiResponse<T> Failure(string message)
     {
         return new ApiResponse<T>

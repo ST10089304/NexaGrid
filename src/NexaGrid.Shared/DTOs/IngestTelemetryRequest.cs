@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using NexaGrid.Shared.Enums;
-
+/* OWASP Foundation (2026) */
 namespace NexaGrid.Shared.DTOs;
 
 public class IngestTelemetryRequest

@@ -2,7 +2,8 @@
 using NexaGrid.Desktop.Theme;
 
 namespace NexaGrid.Desktop.Controls;
-
+/*Tutlane (2019) C# User Control (UserControl) in Windows Forms.*/
+/*Stack Overflow Community (2014) Best practice for managing icon files and resources in WinForms*/
 public class PillarCard : RoundedPanel
 {
     private readonly bool _isAvailable;
@@ -32,7 +33,8 @@ public class PillarCard : RoundedPanel
             title,
             description);
     }
-
+/*Tutlane (2019) C# User Control (UserControl) in Windows Forms.*/
+/*Stack Overflow Community (2014) Best practice for managing icon files and resources in WinForms*/
     private void BuildLayout(
         IconChar icon,
         string number,

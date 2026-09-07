@@ -1,5 +1,5 @@
 namespace NexaGrid.Shared.Structures;
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
 public static class TelemetryBatchProcessor
 {
     public static T[][] CreateBatches<T>(
@@ -49,7 +49,7 @@ public static class TelemetryBatchProcessor
 
         return batches;
     }
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     public static List<T> FlattenToList<T>(
         T[][] batches)
     {

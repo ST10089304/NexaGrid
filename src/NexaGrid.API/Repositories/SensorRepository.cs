@@ -3,7 +3,7 @@ using NexaGrid.API.Data;
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Repositories;
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
 public class SensorRepository : ISensorRepository
 {
     private readonly NexaGridDbContext _dbContext;
@@ -12,7 +12,7 @@ public class SensorRepository : ISensorRepository
     {
         _dbContext = dbContext;
     }
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task<List<Sensor>> GetAllAsync(
         CancellationToken cancellationToken = default)
     {
@@ -22,7 +22,7 @@ public class SensorRepository : ISensorRepository
             .OrderByDescending(sensor => sensor.CreatedAtUtc)
             .ToListAsync(cancellationToken);
     }
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task<Sensor?> GetByIdAsync(
         int id,
         CancellationToken cancellationToken = default)
@@ -34,7 +34,7 @@ public class SensorRepository : ISensorRepository
                 sensor => sensor.Id == id,
                 cancellationToken);
     }
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task<Sensor?> GetByIdentifierAsync(
         string uniqueIdentifier,
         CancellationToken cancellationToken = default)
@@ -50,7 +50,7 @@ public class SensorRepository : ISensorRepository
                     sensor.UniqueIdentifier == normalizedIdentifier,
                 cancellationToken);
     }
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task<Device?> GetDeviceByMacAddressAsync(
         string macAddress,
         CancellationToken cancellationToken = default)
@@ -63,7 +63,7 @@ public class SensorRepository : ISensorRepository
                 device => device.MacAddress == normalizedMacAddress,
                 cancellationToken);
     }
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task AddDeviceAsync(
         Device device,
         CancellationToken cancellationToken = default)
@@ -71,8 +71,7 @@ public class SensorRepository : ISensorRepository
         await _dbContext.Devices.AddAsync(
             device,
             cancellationToken);
-    }
-
+    }/*GeeksforGeeks (2022) Repository Pattern in C#*/
     public async Task AddSensorAsync(
         Sensor sensor,
         CancellationToken cancellationToken = default)
@@ -81,7 +80,7 @@ public class SensorRepository : ISensorRepository
             sensor,
             cancellationToken);
     }
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task SaveChangesAsync(
         CancellationToken cancellationToken = default)
     {

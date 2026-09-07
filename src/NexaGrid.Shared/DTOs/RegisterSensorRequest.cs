@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Shared.DTOs;
-
+/* OWASP Foundation (2026) */
 public class RegisterSensorRequest
 {
     [Required(ErrorMessage = "The device name is required.")]

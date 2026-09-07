@@ -4,7 +4,7 @@ using NexaGrid.Desktop.Services;
 using NexaGrid.Shared.DTOs;
 
 namespace NexaGrid.Desktop.Forms;
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
 public sealed class AttachmentWorkspaceForm : Form
 {
     private static readonly Color BackgroundColour = Color.FromArgb(239, 237, 232);
@@ -33,7 +33,7 @@ public sealed class AttachmentWorkspaceForm : Form
 
     private bool _isBusy;
     private bool _loadingSensors;
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     public AttachmentWorkspaceForm()
     {
         _apiClient = new ApiClient();
@@ -74,7 +74,7 @@ public sealed class AttachmentWorkspaceForm : Form
         Shown += async (_, _) => await InitialiseAsync();
         FormClosed += (_, _) => _apiClient.Dispose();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildPage()
     {
         var page = new TableLayoutPanel
@@ -96,7 +96,7 @@ public sealed class AttachmentWorkspaceForm : Form
 
         return page;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildHeader()
     {
         var panel = new Panel { Dock = DockStyle.Fill };
@@ -144,7 +144,7 @@ public sealed class AttachmentWorkspaceForm : Form
 
         return panel;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildContent()
     {
         var split = new SplitContainer
@@ -166,7 +166,7 @@ public sealed class AttachmentWorkspaceForm : Form
 
         return split;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildUploadPanel()
     {
         var border = CreateBorderPanel();
@@ -205,7 +205,7 @@ public sealed class AttachmentWorkspaceForm : Form
         border.Controls.Add(layout);
         return border;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildAttachmentPanel()
     {
         var border = CreateBorderPanel();
@@ -253,7 +253,7 @@ public sealed class AttachmentWorkspaceForm : Form
         border.Controls.Add(layout);
         return border;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildFooter()
     {
         return new Label
@@ -281,7 +281,7 @@ public sealed class AttachmentWorkspaceForm : Form
         };
         return panel;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Label CreateFieldLabel(string text)
     {
         return new Label
@@ -292,7 +292,7 @@ public sealed class AttachmentWorkspaceForm : Form
             Text = text
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Label CreateLabel(string text, bool bold)
     {
         return new Label
@@ -320,7 +320,7 @@ public sealed class AttachmentWorkspaceForm : Form
             Font = new Font("Segoe UI", 10F)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static ComboBox CreateComboBox()
     {
         return new ComboBox
@@ -333,7 +333,7 @@ public sealed class AttachmentWorkspaceForm : Form
             Font = new Font("Segoe UI", 10F)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Button CreateButton(string text, bool primary = false)
     {
         return new Button
@@ -349,7 +349,7 @@ public sealed class AttachmentWorkspaceForm : Form
             UseVisualStyleBackColor = false
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static DataGridView CreateAttachmentGrid()
     {
         var grid = new DataGridView
@@ -432,7 +432,7 @@ public sealed class AttachmentWorkspaceForm : Form
 
         return grid;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void RegisterEvents()
     {
         _browseButton.Click += (_, _) => BrowseForFile();
@@ -456,7 +456,7 @@ public sealed class AttachmentWorkspaceForm : Form
             }
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task InitialiseAsync()
     {
         await RunBusyOperationAsync(async () =>
@@ -473,7 +473,7 @@ public sealed class AttachmentWorkspaceForm : Form
             await LoadAttachmentsAsync();
         });
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task LoadSensorsAsync()
     {
         string? previous = (_sensorComboBox.SelectedItem as SensorResponse)?.UniqueIdentifier;
@@ -507,7 +507,7 @@ public sealed class AttachmentWorkspaceForm : Form
             ShowFeedback("NO SENSORS ARE REGISTERED. USE THE SENSOR REGISTRY FIRST.", false);
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task LoadAttachmentsAsync()
     {
         SensorResponse? sensor = GetSelectedSensor();
@@ -530,7 +530,7 @@ public sealed class AttachmentWorkspaceForm : Form
             ? "NO ATTACHMENTS HAVE BEEN UPLOADED FOR THIS SENSOR."
             : "SELECT A FILE TO DOWNLOAD OR DOUBLE-CLICK A ROW TO OPEN IT.", false);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void BrowseForFile()
     {
         using var dialog = new OpenFileDialog
@@ -547,7 +547,7 @@ public sealed class AttachmentWorkspaceForm : Form
             ShowFeedback($"READY TO UPLOAD: {Path.GetFileName(dialog.FileName)}", false);
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task UploadAsync()
     {
         SensorResponse? sensor = GetSelectedSensor();
@@ -579,7 +579,7 @@ public sealed class AttachmentWorkspaceForm : Form
         await LoadAttachmentsAsync();
         ShowFeedback($"UPLOAD COMPLETE: {uploaded.OriginalFileName}", true);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task DownloadSelectedAsync(bool openAfterDownload)
     {
         if (_isBusy)
@@ -629,14 +629,14 @@ public sealed class AttachmentWorkspaceForm : Form
             }
         });
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private SensorResponse? GetSelectedSensor() => _sensorComboBox.SelectedItem as SensorResponse;
 
     private SensorAttachmentResponse? GetSelectedAttachment()
     {
         return _attachmentGrid.CurrentRow?.DataBoundItem as SensorAttachmentResponse;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task RunBusyOperationAsync(Func<Task> operation)
     {
         if (_isBusy || IsDisposed || Disposing)
@@ -664,7 +664,7 @@ public sealed class AttachmentWorkspaceForm : Form
             SetBusy(false);
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void SetBusy(bool busy)
     {
         _isBusy = busy;
@@ -675,20 +675,20 @@ public sealed class AttachmentWorkspaceForm : Form
         _refreshButton.Enabled = !busy;
         UpdateActionState();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void UpdateActionState()
     {
         bool enabled = !_isBusy && GetSelectedAttachment() is not null;
         _downloadButton.Enabled = enabled;
         _openButton.Enabled = enabled;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void SetApiStatus(bool online)
     {
         _apiStatusLabel.Text = online ? "API ONLINE" : "API OFFLINE";
         _apiStatusLabel.ForeColor = online ? SuccessColour : DangerColour;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void ShowFeedback(string message, bool success, bool error = false)
     {
         _feedbackLabel.Text = message;

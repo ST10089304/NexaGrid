@@ -1,7 +1,7 @@
 using NexaGrid.Shared.DTOs;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public interface ISensorService
 {
     Task<IReadOnlyList<SensorResponse>> GetAllAsync(

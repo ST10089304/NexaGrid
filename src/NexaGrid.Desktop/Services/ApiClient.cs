@@ -4,12 +4,12 @@ using System.Text.Json.Serialization;
 using NexaGrid.Shared.DTOs;
 
 namespace NexaGrid.Desktop.Services;
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
 public sealed class ApiClient : IDisposable
 {
     private readonly HttpClient _httpClient;
     private readonly JsonSerializerOptions _jsonOptions;
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public ApiClient(
         string baseAddress = "http://localhost:5211")
     {
@@ -29,9 +29,9 @@ public sealed class ApiClient : IDisposable
         _jsonOptions.Converters.Add(
             new JsonStringEnumConverter());
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public HttpClient HttpClient => _httpClient;
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public async Task<bool> IsHealthyAsync(
         CancellationToken cancellationToken = default)
     {
@@ -49,7 +49,7 @@ public sealed class ApiClient : IDisposable
             return false;
         }
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public async Task<T?> GetAsync<T>(
         string endpoint,
         CancellationToken cancellationToken = default)
@@ -63,7 +63,7 @@ public sealed class ApiClient : IDisposable
             response,
             cancellationToken);
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public async Task<TResponse?> PostAsync<TRequest, TResponse>(
         string endpoint,
         TRequest request,
@@ -80,7 +80,7 @@ public sealed class ApiClient : IDisposable
             response,
             cancellationToken);
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public async Task<TResponse?> PostMultipartAsync<TResponse>(
         string endpoint,
         MultipartFormDataContent content,
@@ -96,7 +96,7 @@ public sealed class ApiClient : IDisposable
             response,
             cancellationToken);
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public async Task DownloadFileAsync(
         string endpoint,
         string destinationPath,
@@ -136,7 +136,7 @@ public sealed class ApiClient : IDisposable
             outputStream,
             cancellationToken);
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     private async Task<T?> ReadResponseAsync<T>(
         HttpResponseMessage response,
         CancellationToken cancellationToken)
@@ -161,7 +161,7 @@ public sealed class ApiClient : IDisposable
             responseText,
             _jsonOptions);
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     private static string ExtractErrorMessage(
         string responseText)
     {
@@ -192,7 +192,7 @@ public sealed class ApiClient : IDisposable
 
         return "The API request could not be completed.";
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     private static string FormatValidationErrors(
         JsonElement errors)
     {
@@ -225,7 +225,7 @@ public sealed class ApiClient : IDisposable
                 messages)
             : "The submitted information is invalid.";
     }
-
+/*Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps*/
     public void Dispose()
     {
         _httpClient.Dispose();

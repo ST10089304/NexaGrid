@@ -1,8 +1,7 @@
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Repositories;
-
-public interface ITelemetryRepository
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/public interface ITelemetryRepository
 {
     Task<Sensor?> GetSensorByIdentifierAsync(
         string sensorIdentifier,

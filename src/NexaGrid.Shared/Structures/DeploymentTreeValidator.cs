@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.Shared.Structures;
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
 public static class DeploymentTreeValidator
 {
     public static bool Validate(DeploymentNode? node)
@@ -30,6 +30,7 @@ public static class DeploymentTreeValidator
         return true;
     }
 
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     public static DeploymentNode? FindNode(
         DeploymentNode? currentNode,
         string nodeName)
