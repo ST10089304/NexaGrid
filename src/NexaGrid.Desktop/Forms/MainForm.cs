@@ -266,7 +266,7 @@ public sealed class MainForm : Form
 
         _attachmentsButton.Click +=
             (_, _) =>
-                ShowAttachmentIntroduction();
+                OpenAttachmentWorkspace();
 
         _apiStatusLabel =
             new Label
@@ -694,6 +694,12 @@ public sealed class MainForm : Form
             () => new TelemetryWorkspaceForm());
     }
 
+    private void OpenAttachmentWorkspace()
+    {
+        OpenWorkspace(
+            () => new AttachmentWorkspaceForm());
+    }
+
     private void OpenWorkspace(
         Func<Form> createWorkspace)
     {
@@ -718,14 +724,6 @@ public sealed class MainForm : Form
             _ =
                 CheckApiStatusAsync();
         }
-    }
-
-    private void ShowAttachmentIntroduction()
-    {
-        ShowFeaturePage(
-            "ATTACHMENTS",
-            "SENSOR FILES AND DEPLOYMENT EVIDENCE",
-            "Upload and retrieve configuration files, deployment photographs and hardware logs.");
     }
 
     private void ShowFeaturePage(

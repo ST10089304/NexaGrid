@@ -16,10 +16,8 @@ public sealed class ApiClient : IDisposable
         _httpClient =
             new HttpClient
             {
-                BaseAddress =
-                    new Uri(baseAddress),
-                Timeout =
-                    TimeSpan.FromSeconds(120)
+                BaseAddress = new Uri(baseAddress),
+                Timeout = TimeSpan.FromSeconds(120)
             };
 
         _jsonOptions =
@@ -31,6 +29,8 @@ public sealed class ApiClient : IDisposable
         _jsonOptions.Converters.Add(
             new JsonStringEnumConverter());
     }
+
+    public HttpClient HttpClient => _httpClient;
 
     public async Task<bool> IsHealthyAsync(
         CancellationToken cancellationToken = default)
@@ -64,9 +64,7 @@ public sealed class ApiClient : IDisposable
             cancellationToken);
     }
 
-    public async Task<TResponse?> PostAsync<
-        TRequest,
-        TResponse>(
+    public async Task<TResponse?> PostAsync<TRequest, TResponse>(
         string endpoint,
         TRequest request,
         CancellationToken cancellationToken = default)
@@ -83,8 +81,61 @@ public sealed class ApiClient : IDisposable
             cancellationToken);
     }
 
-    public HttpClient HttpClient =>
-        _httpClient;
+    public async Task<TResponse?> PostMultipartAsync<TResponse>(
+        string endpoint,
+        MultipartFormDataContent content,
+        CancellationToken cancellationToken = default)
+    {
+        using HttpResponseMessage response =
+            await _httpClient.PostAsync(
+                endpoint,
+                content,
+                cancellationToken);
+
+        return await ReadResponseAsync<TResponse>(
+            response,
+            cancellationToken);
+    }
+
+    public async Task DownloadFileAsync(
+        string endpoint,
+        string destinationPath,
+        CancellationToken cancellationToken = default)
+    {
+        using HttpResponseMessage response =
+            await _httpClient.GetAsync(
+                endpoint,
+                HttpCompletionOption.ResponseHeadersRead,
+                cancellationToken);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            string responseText =
+                await response.Content.ReadAsStringAsync(
+                    cancellationToken);
+
+            throw new ApiException(
+                ExtractErrorMessage(responseText),
+                (int)response.StatusCode);
+        }
+
+        await using Stream responseStream =
+            await response.Content.ReadAsStreamAsync(
+                cancellationToken);
+
+        await using var outputStream =
+            new FileStream(
+                destinationPath,
+                FileMode.Create,
+                FileAccess.Write,
+                FileShare.None,
+                bufferSize: 81_920,
+                useAsync: true);
+
+        await responseStream.CopyToAsync(
+            outputStream,
+            cancellationToken);
+    }
 
     private async Task<T?> ReadResponseAsync<T>(
         HttpResponseMessage response,
@@ -96,11 +147,8 @@ public sealed class ApiClient : IDisposable
 
         if (!response.IsSuccessStatusCode)
         {
-            string message =
-                ExtractErrorMessage(responseText);
-
             throw new ApiException(
-                message,
+                ExtractErrorMessage(responseText),
                 (int)response.StatusCode);
         }
 
@@ -114,7 +162,7 @@ public sealed class ApiClient : IDisposable
             _jsonOptions);
     }
 
-    private string ExtractErrorMessage(
+    private static string ExtractErrorMessage(
         string responseText)
     {
         try
@@ -139,7 +187,7 @@ public sealed class ApiClient : IDisposable
         }
         catch (JsonException)
         {
-            // Use the fallback message below.
+            // The API did not return JSON. Use the fallback message.
         }
 
         return "The API request could not be completed.";
@@ -148,17 +196,21 @@ public sealed class ApiClient : IDisposable
     private static string FormatValidationErrors(
         JsonElement errors)
     {
-        var messages =
-            new List<string>();
+        var messages = new List<string>();
 
         foreach (JsonProperty property
                  in errors.EnumerateObject())
         {
+            if (property.Value.ValueKind
+                != JsonValueKind.Array)
+            {
+                continue;
+            }
+
             foreach (JsonElement error
                      in property.Value.EnumerateArray())
             {
-                string? text =
-                    error.GetString();
+                string? text = error.GetString();
 
                 if (!string.IsNullOrWhiteSpace(text))
                 {
