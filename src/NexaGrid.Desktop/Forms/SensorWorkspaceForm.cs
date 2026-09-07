@@ -26,11 +26,14 @@ public class SensorWorkspaceForm : Form
 
     public SensorWorkspaceForm()
     {
+        AutoScaleMode =
+            AutoScaleMode.Dpi;
+
         Text = "NexaGrid / Sensor Workspace";
         StartPosition =
             FormStartPosition.CenterParent;
         MinimumSize =
-            new Size(1180, 720);
+            new Size(1200, 760);
         Size =
             new Size(1380, 820);
         BackColor =
@@ -141,7 +144,7 @@ public class SensorWorkspaceForm : Form
         root.RowStyles.Add(
             new RowStyle(
                 SizeType.Absolute,
-                100));
+                120));
 
         root.RowStyles.Add(
             new RowStyle(
@@ -216,7 +219,7 @@ public class SensorWorkspaceForm : Form
                 ForeColor = AppPalette.DarkGray,
                 Font = AppFonts.Body,
                 AutoSize = true,
-                Location = new Point(42, 63)
+                Location = new Point(42, 76)
             };
 
         _statusLabel.Location =

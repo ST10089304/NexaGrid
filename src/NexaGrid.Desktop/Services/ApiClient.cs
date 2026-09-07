@@ -19,7 +19,7 @@ public sealed class ApiClient : IDisposable
                 BaseAddress =
                     new Uri(baseAddress),
                 Timeout =
-                    TimeSpan.FromSeconds(30)
+                    TimeSpan.FromSeconds(120)
             };
 
         _jsonOptions =

@@ -1,4 +1,4 @@
-using FontAwesome.Sharp;
+﻿using FontAwesome.Sharp;
 using NexaGrid.Desktop.Theme;
 
 namespace NexaGrid.Desktop.Controls;
@@ -19,7 +19,7 @@ public class PillarCard : RoundedPanel
         _isAvailable = isAvailable;
 
         Dock = DockStyle.Fill;
-        MinimumSize = new Size(270, 170);
+        MinimumSize = new Size(270, 205);
         BackColor = AppPalette.Black;
         BorderColor = AppPalette.DarkGray;
         CornerRadius = 1;
@@ -53,7 +53,7 @@ public class PillarCard : RoundedPanel
         layout.ColumnStyles.Add(
             new ColumnStyle(
                 SizeType.Absolute,
-                38));
+                42));
 
         layout.ColumnStyles.Add(
             new ColumnStyle(
@@ -78,7 +78,7 @@ public class PillarCard : RoundedPanel
         layout.RowStyles.Add(
             new RowStyle(
                 SizeType.Absolute,
-                40));
+                46));
 
         var iconControl =
             new IconPictureBox
@@ -112,7 +112,7 @@ public class PillarCard : RoundedPanel
                 Text = title.ToUpperInvariant(),
                 ForeColor = _isAvailable
                     ? AppPalette.White
-                    : AppPalette.MidGray,
+                    : AppPalette.LightGray,
                 Font = AppFonts.Heading,
                 Dock = DockStyle.Fill,
                 TextAlign =
@@ -125,11 +125,16 @@ public class PillarCard : RoundedPanel
             new Label
             {
                 Text = description,
-                ForeColor = AppPalette.MidGray,
-                Font = AppFonts.Caption,
+                ForeColor = AppPalette.LightGray,
+                Font = new Font(
+                    "Segoe UI",
+                    9,
+                    FontStyle.Regular),
                 Dock = DockStyle.Fill,
                 AutoEllipsis = true,
-                Margin = new Padding(0, 4, 15, 4)
+                TextAlign = ContentAlignment.TopLeft,
+                Margin = new Padding(0, 6, 8, 8),
+                Padding = new Padding(0, 2, 0, 0)
             };
 
         var actionPanel =
@@ -144,7 +149,7 @@ public class PillarCard : RoundedPanel
             new Button
             {
                 Text = _isAvailable
-                    ? "ENTER  →"
+                    ? "ENTER"
                     : "LOCKED",
                 Font = AppFonts.Button,
                 BackColor = _isAvailable
@@ -154,7 +159,7 @@ public class PillarCard : RoundedPanel
                     ? AppPalette.Black
                     : AppPalette.MidGray,
                 FlatStyle = FlatStyle.Flat,
-                Size = new Size(96, 34),
+                Size = new Size(110, 38),
                 Dock = DockStyle.Right,
                 Cursor = _isAvailable
                     ? Cursors.Hand
@@ -226,3 +231,5 @@ public class PillarCard : RoundedPanel
         Controls.Add(layout);
     }
 }
+
+
