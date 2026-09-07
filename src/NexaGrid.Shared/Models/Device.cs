@@ -1,5 +1,5 @@
 namespace NexaGrid.Shared.Models;
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
 public class Device
 {
     public int Id { get; set; }

@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Repositories;
-
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
 public interface ISensorRepository
 {
     Task<List<Sensor>> GetAllAsync(

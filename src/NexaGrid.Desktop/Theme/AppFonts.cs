@@ -1,5 +1,5 @@
 namespace NexaGrid.Desktop.Theme;
-
+/*Refactoring Guru (2021) Factory and Theme Patterns in GUI Development*/
 public static class AppFonts
 {
     public static Font Brand =>

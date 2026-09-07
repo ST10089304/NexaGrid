@@ -6,6 +6,7 @@ namespace NexaGrid.Shared.Structures;
 /// A bounded circular buffer optimised for recent telemetry values.
 /// When full, the oldest reading is replaced by the newest reading.
 /// </summary>
+/// /*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
 public sealed class TelemetryBuffer<T> : IReadOnlyCollection<T>
 {
     private readonly T[] _items;
@@ -22,7 +23,7 @@ public sealed class TelemetryBuffer<T> : IReadOnlyCollection<T>
         }
 
         _items = new T[capacity];
-    }
+    }/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
 
     public int Count { get; private set; }
 
@@ -45,7 +46,7 @@ public sealed class TelemetryBuffer<T> : IReadOnlyCollection<T>
             _startIndex = (_startIndex + 1) % Capacity;
         }
     }
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     public IReadOnlyList<T> ToList()
     {
         var result = new List<T>(Count);
@@ -57,7 +58,7 @@ public sealed class TelemetryBuffer<T> : IReadOnlyCollection<T>
 
         return result;
     }
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     public IEnumerator<T> GetEnumerator()
     {
         for (int index = 0; index < Count; index++)
@@ -68,7 +69,7 @@ public sealed class TelemetryBuffer<T> : IReadOnlyCollection<T>
             yield return _items[actualIndex];
         }
     }
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     IEnumerator IEnumerable.GetEnumerator()
     {
         return GetEnumerator();

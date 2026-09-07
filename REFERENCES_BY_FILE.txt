@@ -84,7 +84,15 @@ R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn.
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+Kip, R. (2021) Upload Files To Folder Using C#. C# Corner. Available at: https://www.c-sharpcorner.com/blogs/upload-files-to-folder-using-c-sharp (Accessed: 7 September 2026).
 
+Programming Everyday (2013) OpenFileDialog In Windows Forms Application using C#. Programming Everyday Blog. Available at: https://programmingeveryday.wordpress.com/2013/02/14/openfiledialog-in-windows-forms-application-using-c-2/ (Accessed: 16 August 2026).
+
+ProgrammingKnowledge (2014) C# Desktop Application Tutorial 47 - How to Select File with OpenFileDialog. YouTube. Available at: https://www.youtube.com/watch?v=hb6ZnMdN70k (Accessed: 7 September 2026).
+
+SQLNetHub (2021) How to Set Filters for OpenFileDialog and SaveFileDialog in C#. SQLNetHub Technical Blog. Available at: https://www.sqlnethub.com/blog/how-to-set-filters-for-openfiledialog-and-savefiledialog-in-c-sharp/ (Accessed: 16 August 2026).
+
+Stack Overflow community (2019) Multiple Filters OpenFileDialog. Stack Overflow Thread. Available at: https://stackoverflow.com/questions/57433973/multiple-filters-openfiledialog (Accessed: 17 August 2026).
 src/NexaGrid.API/Controllers/SensorsController.cs
 -------------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -97,7 +105,13 @@ R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn.
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+Halvorsen, H. P. (2020) Simulation and Control with C# and WinForms. University of South-Eastern Norway / Halvorsen Blog. Available at: https://www.halvorsen.blog/documents/programming/csharp/resources/Simulation%20and%20Control%20with%20CSharp%20and%20WinForms.pdf (Accessed: 15 August)
+(Covers building interactive GUI control systems, reading sensor inputs via timers, and processing configuration file parameters in C#).
 
+Issa, G. (2021) .NET C# for IoT and Robotics. GHI Electronics / Mouser Electronics. Available at: https://www.mouser.com/pdfDocs/C-for-IoT-and-Robotics.pdf (Accessed: 15 August)
+(Demonstrates how desktop C# applications interface with external sensor hardware controllers, data streams, and peripheral input paths).
+
+Stack Overflow Community (2013) Reading a text file using OpenFileDialog in windows forms. Stack Overflow Thread. Available at: https://stackoverflow.com/questions/16136383/reading-a-text-file-using-openfiledialog-in-windows-forms (Accessed: 15 August)
 src/NexaGrid.API/Controllers/TelemetryController.cs
 ---------------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -188,7 +202,23 @@ R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: htt
 R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+controller components.
 
+CodeProject (2014) Generic Repository Pattern in C#. CodeProject Articles. Available at: https://www.codeproject.com/Articles/788880/Generic-Repository-Pattern-in-Csharp (Accessed: 15 August)
+
+(Demonstrates building generic and specific repository folders to manage DbSet collections and entity queries).
+
+C# Corner (2021) Repository Pattern In C# With Entity Framework. C# Corner Articles. Available at: https://www.c-sharpcorner.com/article/repository-pattern-in-c-sharp/ (Accessed: 15 August)
+
+(Details folder structures and interface implementations when wiring up repositories to data context classes).
+
+Stack Overflow Community (2017) Repository Pattern in WinForms Application. Stack Overflow Thread. Available at: https://stackoverflow.com/questions/43204918/repository-pattern-in-winforms-application (Accessed: 15 August)
+
+(Discusses practical application architectures for connecting WinForms UI event handlers to backend repository layers).
+
+Tutlane (2020) C# Repository Design Pattern. Tutlane Tutorials. Available at: https://www.tutlane.com/tutorial/design-patterns/repository-design-pattern-in-csharp (Accessed: 15 August)
+
+(Covers separating persistence interfaces from concrete data persistence code in .NET applications).
 src/NexaGrid.API/Repositories/IAttachmentRepository.cs
 ------------------------------------------------------
 R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
@@ -266,7 +296,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+CodeProject (2018) N-Tier Architecture in WinForms Applications. CodeProject Articles. Available at: https://www.codeproject.com/Articles/1252178/N-Tier-Architecture-in-WinForms-Applications (Accessed 20 August 2026)
 src/NexaGrid.API/Services/AttachmentService.cs
 ----------------------------------------------
 R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
@@ -279,7 +309,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+CodeProject (2018) N-Tier Architecture in WinForms Applications. CodeProject Articles. Available at: https://www.codeproject.com/Articles/1252178/N-Tier-Architecture-in-WinForms-Applications (Accessed 20 August 2026)
 src/NexaGrid.API/Services/IAttachmentService.cs
 -----------------------------------------------
 R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
@@ -292,7 +322,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+CodeProject (2018) N-Tier Architecture in WinForms Applications. CodeProject Articles. Available at: https://www.codeproject.com/Articles/1252178/N-Tier-Architecture-in-WinForms-Applications (Accessed 20 August 2026)
 src/NexaGrid.API/Services/ISensorService.cs
 -------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -305,7 +335,7 @@ R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Avai
 R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
 R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
-
+CodeProject (2018) N-Tier Architecture in WinForms Applications. CodeProject Articles. Available at: https://www.codeproject.com/Articles/1252178/N-Tier-Architecture-in-WinForms-Applications (Accessed 20 August 2026)
 src/NexaGrid.API/Services/ITelemetryService.cs
 ----------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -318,7 +348,7 @@ R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Avai
 R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
 R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
-
+CodeProject (2018) N-Tier Architecture in WinForms Applications. CodeProject Articles. Available at: https://www.codeproject.com/Articles/1252178/N-Tier-Architecture-in-WinForms-Applications (Accessed 20 August 2026)
 src/NexaGrid.API/Services/SensorService.cs
 ------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -331,7 +361,7 @@ R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Avai
 R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
 R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
-
+CodeProject (2018) N-Tier Architecture in WinForms Applications. CodeProject Articles. Available at: https://www.codeproject.com/Articles/1252178/N-Tier-Architecture-in-WinForms-Applications (Accessed 20 August 2026)
 src/NexaGrid.API/Services/TelemetryService.cs
 ---------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -344,7 +374,7 @@ R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Avai
 R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
 R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
-
+CodeProject (2018) N-Tier Architecture in WinForms Applications. CodeProject Articles. Available at: https://www.codeproject.com/Articles/1252178/N-Tier-Architecture-in-WinForms-Applications (Accessed 20 August 2026)
 src/NexaGrid.Desktop/Controls/NetworkHeroVisual.cs
 --------------------------------------------------
 R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
@@ -409,7 +439,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
-
+Tutlane (2019) C# Windows Forms (WinForms) Tutorial. Tutlane Tutorials. Available at: https://www.tutlane.com/tutorial/csharp/csharp-winforms-tutorial (Accessed 25 August 2026 )
 src/NexaGrid.Desktop/Forms/MainForm.cs
 --------------------------------------
 R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
@@ -422,7 +452,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
-
+Tutlane (2019) C# Windows Forms (WinForms) Tutorial. Tutlane Tutorials. Available at: https://www.tutlane.com/tutorial/csharp/csharp-winforms-tutorial (Accessed 25 August 2026 )
 src/NexaGrid.Desktop/Forms/SensorWorkspaceForm.cs
 -------------------------------------------------
 R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
@@ -435,7 +465,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
-
+Tutlane (2019) C# Windows Forms (WinForms) Tutorial. Tutlane Tutorials. Available at: https://www.tutlane.com/tutorial/csharp/csharp-winforms-tutorial (Accessed 25 August 2026 )
 src/NexaGrid.Desktop/Forms/TelemetryWorkspaceForm.cs
 ----------------------------------------------------
 R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
@@ -448,7 +478,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
-
+Tutlane (2019) C# Windows Forms (WinForms) Tutorial. Tutlane Tutorials. Available at: https://www.tutlane.com/tutorial/csharp/csharp-winforms-tutorial (Accessed 25 August 2026 )
 src/NexaGrid.Desktop/Program.cs
 -------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -461,7 +491,7 @@ R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Ava
 R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
-
+Tutlane (2019) C# Windows Forms (WinForms) Tutorial. Tutlane Tutorials. Available at: https://www.tutlane.com/tutorial/csharp/csharp-winforms-tutorial (Accessed 25 August 2026 )
 src/NexaGrid.Desktop/Services/ApiClient.cs
 ------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -474,7 +504,7 @@ R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Avai
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps. Stack Exchange Network. Available at: https://softwareengineering.stackexchange.com/questions/298451/service-layer-vs-repository-layer-in-desktop-apps (Accessed: 7 September 2026).
 src/NexaGrid.Desktop/Services/ApiException.cs
 ---------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -487,7 +517,7 @@ R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Avai
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps. Stack Exchange Network. Available at: https://softwareengineering.stackexchange.com/questions/298451/service-layer-vs-repository-layer-in-desktop-apps (Accessed: 7 September 2026).
 src/NexaGrid.Desktop/Services/AttachmentApiService.cs
 -----------------------------------------------------
 R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
@@ -500,7 +530,7 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps. Stack Exchange Network. Available at: https://softwareengineering.stackexchange.com/questions/298451/service-layer-vs-repository-layer-in-desktop-apps (Accessed: 7 September 2026).
 src/NexaGrid.Desktop/Services/SensorApiService.cs
 -------------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -513,7 +543,7 @@ R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Avai
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps. Stack Exchange Network. Available at: https://softwareengineering.stackexchange.com/questions/298451/service-layer-vs-repository-layer-in-desktop-apps (Accessed: 7 September 2026).
 src/NexaGrid.Desktop/Services/TelemetryApiService.cs
 ----------------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -526,7 +556,7 @@ R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Avai
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
 R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
-
+Software Engineering Stack Exchange (2015) Service layer vs Repository layer in desktop apps. Stack Exchange Network. Available at: https://softwareengineering.stackexchange.com/questions/298451/service-layer-vs-repository-layer-in-desktop-apps (Accessed: 7 September 2026).
 src/NexaGrid.Desktop/Theme/AppFonts.cs
 --------------------------------------
 R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
@@ -539,7 +569,9 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+Refactoring Guru (2021) Factory and Theme Patterns in GUI Development. Refactoring.Guru. Available at: https://refactoring.guru/design-patterns/abstract-factory (Accessed: 5 September 2026).
 
+Stack Overflow Community (2017) Centralizing Color Schemes and Styles in C# Desktop Applications. Stack Overflow Thread. Available at: https://stackoverflow.com/questions/41285211/centralized-styling-and-themes-in-winforms (Accessed: 5 September 2026).
 src/NexaGrid.Desktop/Theme/AppPalette.cs
 ----------------------------------------
 R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
@@ -552,7 +584,9 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
 R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+Refactoring Guru (2021) Factory and Theme Patterns in GUI Development. Refactoring.Guru. Available at: https://refactoring.guru/design-patterns/abstract-factory (Accessed: 5 September 2026).
 
+Stack Overflow Community (2017) Centralizing Color Schemes and Styles in C# Desktop Applications. Stack Overflow Thread. Available at: https://stackoverflow.com/questions/41285211/centralized-styling-and-themes-in-winforms (Accessed: 5 September 2026).
 src/NexaGrid.Shared/DTOs/ApiResponse.cs
 ---------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
@@ -669,7 +703,15 @@ R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Availa
 R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
 R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
 R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+C# Corner (2020) Enums in C#. C# Corner Articles. Available at: https://www.c-sharpcorner.com/article/enums-in-c-sharp/ (Accessed: 7 September 2026).
 
+CodeProject (2013) Working with Enums and Flags in C#. CodeProject Articles. Available at: https://www.codeproject.com/Articles/651034/Working-with-Enums-and-Flags-in-CSharp (Accessed: 7 September 2026).
+
+GeeksforGeeks (2021) C# | Enumeration (or enum). GeeksforGeeks Programming Tutorials. Available at: https://www.geeksforgeeks.org/c-sharp-enumeration-or-enum/ (Accessed: 7 September 2026).
+
+Stack Overflow Community (2018) Best practices for enums in application design. Stack Overflow Thread. Available at: https://stackoverflow.com/questions/48280031/best-practices-for-enums-in-c-sharp (Accessed: 7 September 2026).
+
+Tutlane (2019) C# Enum (Enumeration). Tutlane Tutorials. Available at: https://www.tutlane.com/tutorial/csharp/csharp-enum-enumeration (Accessed: 7 September 2026).
 src/NexaGrid.Shared/Enums/TelemetryDataType.cs
 ----------------------------------------------
 R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).

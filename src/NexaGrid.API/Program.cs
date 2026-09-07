@@ -43,7 +43,7 @@ builder.Services.AddDbContext<NexaGridDbContext>(
 // =========================================================
 // Repository registrations
 // =========================================================
-
+/*OWASP Foundation (2026) ‘Input Validation'*/
 builder.Services.AddScoped<
     ISensorRepository,
     SensorRepository>();

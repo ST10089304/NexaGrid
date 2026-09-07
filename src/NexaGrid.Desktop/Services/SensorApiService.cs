@@ -1,7 +1,8 @@
 using NexaGrid.Shared.DTOs;
 
 namespace NexaGrid.Desktop.Services;
-
+    
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
 public class SensorApiService
 {
     private readonly ApiClient _apiClient;
@@ -11,7 +12,8 @@ public class SensorApiService
     {
         _apiClient = apiClient;
     }
-
+    
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     public async Task<
         IReadOnlyList<SensorResponse>>
         GetAllAsync(
@@ -26,7 +28,7 @@ public class SensorApiService
         return response?.Data
             ?? [];
     }
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     public async Task<SensorResponse> RegisterAsync(
         RegisterSensorRequest request,
         CancellationToken cancellationToken = default)

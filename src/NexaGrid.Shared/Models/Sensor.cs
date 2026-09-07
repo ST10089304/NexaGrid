@@ -1,5 +1,5 @@
 using NexaGrid.Shared.Enums;
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
 namespace NexaGrid.Shared.Models;
 
 public class Sensor

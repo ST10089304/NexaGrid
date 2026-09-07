@@ -3,7 +3,8 @@ using NexaGrid.API.Data;
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Repositories;
-
+/*CodeProject (2014) Generic Repository Pattern in C#*/
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
 public class AttachmentRepository : IAttachmentRepository
 {
     private readonly NexaGridDbContext _dbContext;
@@ -13,7 +14,8 @@ public class AttachmentRepository : IAttachmentRepository
     {
         _dbContext = dbContext;
     }
-
+/*CodeProject (2014) Generic Repository Pattern in C#*/
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task<Sensor?> GetSensorAsync(
         int sensorId,
         CancellationToken cancellationToken = default)
@@ -24,7 +26,8 @@ public class AttachmentRepository : IAttachmentRepository
                 sensor => sensor.Id == sensorId,
                 cancellationToken);
     }
-
+/*CodeProject (2014) Generic Repository Pattern in C#*/
+/*C# Corner (2021) Repository Pattern In C# With Entity Framework*/
     public async Task<SensorAttachment?> GetByIdAsync(
         int attachmentId,
         CancellationToken cancellationToken = default)

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using NexaGrid.Shared.Structures;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public interface ITelemetryService
 {
     Task<TelemetryResponse> IngestAsync(

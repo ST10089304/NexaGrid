@@ -1,7 +1,7 @@
 using System.Numerics;
 
 namespace NexaGrid.Shared.Generics;
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
 public readonly record struct SensorMeasurement<T>(
     string SensorIdentifier,
     T Value,
@@ -19,7 +19,7 @@ public readonly record struct SensorMeasurement<T>(
             left.Value + right.Value,
             left.Unit);
     }
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     public static SensorMeasurement<T> operator -(
         SensorMeasurement<T> left,
         SensorMeasurement<T> right)
@@ -31,7 +31,7 @@ public readonly record struct SensorMeasurement<T>(
             left.Value - right.Value,
             left.Unit);
     }
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     public static bool operator >(
         SensorMeasurement<T> left,
         SensorMeasurement<T> right)
@@ -47,7 +47,7 @@ public readonly record struct SensorMeasurement<T>(
         ValidateUnits(left, right);
         return left.Value < right.Value;
     }
-
+/*Stack Overflow Community (2018) Best practices for structuring Models, Structs, and Generics in C# projects*/
     private static void ValidateUnits(
         SensorMeasurement<T> left,
         SensorMeasurement<T> right)

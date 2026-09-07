@@ -1,7 +1,7 @@
 using NexaGrid.Shared.DTOs;
 
 namespace NexaGrid.Desktop.Services;
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
 public sealed class AttachmentApiService
 {
     private readonly ApiClient _apiClient;
@@ -25,7 +25,7 @@ public sealed class AttachmentApiService
 
         return response?.Data ?? [];
     }
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     public async Task<SensorAttachmentResponse> UploadAsync(
         int sensorId,
         string filePath,

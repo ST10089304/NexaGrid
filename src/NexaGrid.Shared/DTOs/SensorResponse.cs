@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Shared.DTOs;
-
+/* OWASP Foundation (2026) */
 public class SensorResponse
 {
     public int Id { get; set; }

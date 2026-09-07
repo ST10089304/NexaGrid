@@ -3,7 +3,7 @@ using NexaGrid.Shared.DTOs;
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public class AttachmentService : IAttachmentService
 {
     private const long MaximumFileSizeBytes =
@@ -28,7 +28,7 @@ public class AttachmentService : IAttachmentService
             [".yml"] = "application/yaml",
             [".conf"] = "text/plain"
         };
-
+/*CodeProject (2018)*/
     private readonly IAttachmentRepository
         _attachmentRepository;
 
@@ -44,7 +44,7 @@ public class AttachmentService : IAttachmentService
 
         _environment = environment;
     }
-
+/*CodeProject (2018)*/
     public async Task<SensorAttachmentResponse> UploadAsync(
         int sensorId,
         IFormFile file,
@@ -95,7 +95,7 @@ public class AttachmentService : IAttachmentService
             Path.Combine(
                 relativeDirectory,
                 storedFileName);
-
+/*CodeProject (2018)*/
         try
         {
             await using Stream inputStream =
@@ -152,7 +152,7 @@ public class AttachmentService : IAttachmentService
             throw;
         }
     }
-
+/*CodeProject (2018)*/
     public async Task<
         IReadOnlyList<SensorAttachmentResponse>>
         GetBySensorIdAsync(

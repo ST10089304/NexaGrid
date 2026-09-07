@@ -2,7 +2,7 @@ using System.Drawing.Drawing2D;
 using NexaGrid.Desktop.Theme;
 
 namespace NexaGrid.Desktop.Controls;
-
+/*Tutlane (2019) C# User Control (UserControl) in Windows Forms.*/
 public class NetworkHeroVisual : Control
 {
     public NetworkHeroVisual()
@@ -11,7 +11,7 @@ public class NetworkHeroVisual : Control
         BackColor = AppPalette.Background;
         MinimumSize = new Size(340, 260);
     }
-
+/*Tutlane (2019) C# User Control (UserControl) in Windows Forms.*/
     protected override void OnPaint(
         PaintEventArgs eventArgs)
     {
@@ -127,7 +127,7 @@ public class NetworkHeroVisual : Control
             18,
             Height - 28);
     }
-
+/*Tutlane (2019) C# User Control (UserControl) in Windows Forms.*/
     private static void DrawConnection(
         Graphics graphics,
         Pen pen,

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NexaGrid.API.Services;
 using NexaGrid.Shared.DTOs;
-
+/*Pattinson, R. (2009)*/
 namespace NexaGrid.API.Controllers;
 
 [ApiController]
@@ -15,7 +15,7 @@ public class TelemetryController : ControllerBase
     {
         _telemetryService = telemetryService;
     }
-
+/*Pattinson, R. (2009)*/
     [HttpPost]
     [ProducesResponseType(
         typeof(ApiResponse<TelemetryResponse>),
@@ -43,7 +43,7 @@ public class TelemetryController : ControllerBase
                         : "Telemetry accepted successfully."));
         }
         catch (KeyNotFoundException exception)
-        {
+        {/*Pattinson, R. (2009)*/
             return NotFound(
                 ApiResponse<TelemetryResponse>.Failure(
                     exception.Message));
@@ -55,7 +55,7 @@ public class TelemetryController : ControllerBase
                     exception.Message));
         }
     }
-
+/*Pattinson, R. (2009)*/
     [HttpGet("sensor/{sensorIdentifier}")]
     [ProducesResponseType(
         typeof(ApiResponse<IReadOnlyList<TelemetryResponse>>),
@@ -87,7 +87,7 @@ public class TelemetryController : ControllerBase
                     exception.Message));
         }
     }
-
+/*Pattinson, R. (2009)*/
     [HttpPost("seed/{sensorIdentifier}")]
     [ProducesResponseType(
         typeof(ApiResponse<TelemetrySeedResponse>),

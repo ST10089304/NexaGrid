@@ -4,7 +4,7 @@ using NexaGrid.Shared.DTOs;
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Desktop.Forms;
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
 public class SensorWorkspaceForm : Form
 {
     private readonly ApiClient _apiClient;
@@ -23,7 +23,7 @@ public class SensorWorkspaceForm : Form
     private readonly DataGridView _sensorGrid;
     private readonly Label _statusLabel;
     private readonly Label _recordCountLabel;
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     public SensorWorkspaceForm()
     {
         AutoScaleMode =
@@ -103,7 +103,7 @@ public class SensorWorkspaceForm : Form
         BuildInterface();
         RegisterEvents();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     protected override async void OnShown(
         EventArgs eventArgs)
     {
@@ -122,7 +122,7 @@ public class SensorWorkspaceForm : Form
 
         base.Dispose(disposing);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void BuildInterface()
     {
         var root =
@@ -168,7 +168,7 @@ public class SensorWorkspaceForm : Form
 
         Controls.Add(root);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Panel BuildTopStrip()
     {
         var strip =
@@ -191,7 +191,7 @@ public class SensorWorkspaceForm : Form
 
         return strip;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Panel BuildHeader()
     {
         var header =
@@ -243,7 +243,7 @@ public class SensorWorkspaceForm : Form
 
         return header;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildContent()
     {
         var content =
@@ -279,7 +279,7 @@ public class SensorWorkspaceForm : Form
 
         return content;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildRegistrationPanel()
     {
         var panel =
@@ -351,7 +351,7 @@ public class SensorWorkspaceForm : Form
 
         return panel;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private Control BuildRegistryPanel()
     {
         var panel =
@@ -430,7 +430,7 @@ public class SensorWorkspaceForm : Form
 
         return panel;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void RegisterEvents()
     {
         _registerButton.Click +=
@@ -441,7 +441,7 @@ public class SensorWorkspaceForm : Form
             async (_, _) =>
                 await LoadSensorsAsync();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task CheckApiAndLoadAsync()
     {
         bool healthy =
@@ -470,7 +470,7 @@ public class SensorWorkspaceForm : Form
 
         await LoadSensorsAsync();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task LoadSensorsAsync()
     {
         SetBusy(true);
@@ -497,7 +497,7 @@ public class SensorWorkspaceForm : Form
             SetBusy(false);
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private async Task RegisterSensorAsync()
     {
         if (!ValidateForm())
@@ -558,7 +558,7 @@ public class SensorWorkspaceForm : Form
             SetBusy(false);
         }
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private bool ValidateForm()
     {
         if (string.IsNullOrWhiteSpace(
@@ -584,7 +584,7 @@ public class SensorWorkspaceForm : Form
 
         return true;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void SetBusy(bool busy)
     {
         _registerButton.Enabled = !busy;
@@ -610,7 +610,7 @@ public class SensorWorkspaceForm : Form
 
         _deviceNameTextBox.Focus();
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private void ShowFeedback(
         string message,
         MessageBoxIcon icon)
@@ -622,7 +622,7 @@ public class SensorWorkspaceForm : Form
             MessageBoxButtons.OK,
             icon);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static void AddField(
         TableLayoutPanel form,
         string labelText,
@@ -655,7 +655,7 @@ public class SensorWorkspaceForm : Form
 
         form.Controls.Add(control);
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static TextBox CreateTextBox()
     {
         return new TextBox
@@ -670,7 +670,7 @@ public class SensorWorkspaceForm : Form
                 new Padding(0, 3, 0, 7)
         };
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static ComboBox CreateCategoryComboBox()
     {
         var comboBox =
@@ -691,7 +691,7 @@ public class SensorWorkspaceForm : Form
 
         return comboBox;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Button CreatePrimaryButton(
         string text)
     {
@@ -714,7 +714,7 @@ public class SensorWorkspaceForm : Form
 
         return button;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static Button CreateSecondaryButton(
         string text)
     {
@@ -735,7 +735,7 @@ public class SensorWorkspaceForm : Form
 
         return button;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static DataGridView CreateSensorGrid()
     {
         var grid =
@@ -830,7 +830,7 @@ public class SensorWorkspaceForm : Form
 
         return grid;
     }
-
+/*Tutlane (2019) C# Windows Forms (WinForms) Tutorial*/
     private static DataGridViewTextBoxColumn
         CreateColumn(
             string propertyName,

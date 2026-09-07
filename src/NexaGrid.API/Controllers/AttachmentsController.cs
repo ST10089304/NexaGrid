@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using NexaGrid.API.Services;
 using NexaGrid.Shared.DTOs;
-
+/*Microsoft (2026) */
+/*Kip, R. (2021) Upload Files To Folder Using C#*/
 namespace NexaGrid.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class AttachmentsController : ControllerBase
-{
+{/*Microsoft (2026) */
     private readonly IAttachmentService
         _attachmentService;
 
@@ -17,9 +18,9 @@ public class AttachmentsController : ControllerBase
         _attachmentService = attachmentService;
     }
 
-    [HttpPost("sensor/{sensorId:int}")]
+    [HttpPost("sensor/{sensorId:int}")]/*Microsoft (2026) */
     [Consumes("multipart/form-data")]
-    [RequestSizeLimit(10_485_760)]
+    [RequestSizeLimit(10_485_760)]/*Kip, R. (2021) Upload Files To Folder Using C#*/
     [ProducesResponseType(
         typeof(ApiResponse<SensorAttachmentResponse>),
         StatusCodes.Status201Created)]
@@ -30,7 +31,7 @@ public class AttachmentsController : ControllerBase
         int sensorId,
         [FromForm] IFormFile file,
         CancellationToken cancellationToken)
-    {
+    {/*Microsoft (2026) */
         try
         {
             SensorAttachmentResponse attachment =
@@ -45,13 +46,13 @@ public class AttachmentsController : ControllerBase
                     attachment,
                     "Attachment uploaded successfully."));
         }
-        catch (KeyNotFoundException exception)
+        catch (KeyNotFoundException exception)/*Microsoft (2026) */
         {
             return NotFound(
                 ApiResponse<SensorAttachmentResponse>.Failure(
                     exception.Message));
         }
-        catch (ArgumentException exception)
+        catch (ArgumentException exception)/*Microsoft (2026) */
         {
             return BadRequest(
                 ApiResponse<SensorAttachmentResponse>.Failure(
@@ -62,12 +63,13 @@ public class AttachmentsController : ControllerBase
     [HttpGet("sensor/{sensorId:int}")]
     public async Task<ActionResult<
         ApiResponse<IReadOnlyList<SensorAttachmentResponse>>>>
-        GetBySensor(
+        GetBySensor(/*Microsoft (2026) */
             int sensorId,
             CancellationToken cancellationToken)
     {
         try
-        {
+        {/*Microsoft (2026) */
+        /*Kip, R. (2021) Upload Files To Folder Using C#*/
             IReadOnlyList<SensorAttachmentResponse>
                 attachments =
                     await _attachmentService
@@ -81,7 +83,7 @@ public class AttachmentsController : ControllerBase
                     attachments,
                     $"{attachments.Count} attachment(s) retrieved."));
         }
-        catch (KeyNotFoundException exception)
+        catch (KeyNotFoundException exception)/*Microsoft (2026) */
         {
             return NotFound(
                 ApiResponse<
@@ -90,7 +92,7 @@ public class AttachmentsController : ControllerBase
         }
     }
 
-    [HttpGet("{attachmentId:int}/download")]
+    [HttpGet("{attachmentId:int}/download")]/*Microsoft (2026) */
     public async Task<IActionResult> Download(
         int attachmentId,
         CancellationToken cancellationToken)
@@ -102,7 +104,7 @@ public class AttachmentsController : ControllerBase
                     attachmentId,
                     cancellationToken);
 
-            return File(
+            return File(/*Microsoft (2026) */
                 result.Stream,
                 result.ContentType,
                 result.FileName,
@@ -116,7 +118,7 @@ public class AttachmentsController : ControllerBase
                 message = exception.Message
             });
         }
-        catch (FileNotFoundException exception)
+        catch (FileNotFoundException exception)/*Microsoft (2026) */
         {
             return NotFound(new
             {

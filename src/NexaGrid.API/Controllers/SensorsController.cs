@@ -3,18 +3,18 @@ using NexaGrid.API.Services;
 using NexaGrid.Shared.DTOs;
 
 namespace NexaGrid.API.Controllers;
-
+/*Halvorsen, H. P. (2020)*/
 [ApiController]
 [Route("api/[controller]")]
 public class SensorsController : ControllerBase
 {
     private readonly ISensorService _sensorService;
-
+/*Halvorsen, H. P. (2020)*/
     public SensorsController(ISensorService sensorService)
     {
         _sensorService = sensorService;
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpGet]
     [ProducesResponseType(
         typeof(ApiResponse<IReadOnlyList<SensorResponse>>),
@@ -30,7 +30,7 @@ public class SensorsController : ControllerBase
             sensors,
             $"{sensors.Count} sensor(s) retrieved."));
     }
-
+/*Issa, G. (2021)*/
     [HttpGet("{id:int}")]
     [ProducesResponseType(
         typeof(ApiResponse<SensorResponse>),
@@ -51,13 +51,13 @@ public class SensorsController : ControllerBase
                 ApiResponse<SensorResponse>.Failure(
                     $"Sensor with ID {id} was not found."));
         }
-
+/*Issa, G. (2021)*/
         return Ok(
             ApiResponse<SensorResponse>.Ok(
                 sensor,
                 "Sensor retrieved successfully."));
     }
-
+/*Issa, G. (2021)*/
     [HttpPost]
     [ProducesResponseType(
         typeof(ApiResponse<SensorResponse>),
@@ -74,7 +74,7 @@ public class SensorsController : ControllerBase
                 await _sensorService.RegisterAsync(
                     request,
                     cancellationToken);
-
+/*Issa, G. (2021)*/
             return CreatedAtAction(
                 nameof(GetById),
                 new { id = sensor.Id },
@@ -82,7 +82,7 @@ public class SensorsController : ControllerBase
                     sensor,
                     "Sensor registered successfully."));
         }
-        catch (InvalidOperationException exception)
+        catch (InvalidOperationException exception) /*Issa, G. (2021)*/
         {
             return Conflict(
                 ApiResponse<SensorResponse>.Failure(

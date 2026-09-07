@@ -1,7 +1,7 @@
 using NexaGrid.Shared.DTOs;
 
 namespace NexaGrid.Desktop.Services;
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
 public sealed class TelemetryApiService
 {
     private readonly ApiClient _apiClient;
@@ -14,7 +14,7 @@ public sealed class TelemetryApiService
             ?? throw new ArgumentNullException(
                 nameof(apiClient));
     }
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     public async Task<TelemetryResponse> IngestAsync(
         IngestTelemetryRequest request,
         CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ public sealed class TelemetryApiService
 
         return response.Data;
     }
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     public async Task<IReadOnlyList<TelemetryResponse>>
         GetRecentAsync(
             string sensorIdentifier,
@@ -99,7 +99,7 @@ public sealed class TelemetryApiService
         return response.Data
             ?? new List<TelemetryResponse>();
     }
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     public async Task<TelemetrySeedResponse> SeedAsync(
         string sensorIdentifier,
         int count,
@@ -153,14 +153,14 @@ public sealed class TelemetryApiService
 
         return response.Data;
     }
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     public Task<bool> IsApiHealthyAsync(
         CancellationToken cancellationToken = default)
     {
         return _apiClient.IsHealthyAsync(
             cancellationToken);
     }
-
+/*Stack Overflow Community (2016) Proper place for business logic in WinForms applications*/
     private static void ValidateSensorIdentifier(
         string sensorIdentifier)
     {

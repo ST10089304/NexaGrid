@@ -1,5 +1,5 @@
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public sealed class AttachmentDownloadResult
 {
     public required Stream Stream { get; init; }
