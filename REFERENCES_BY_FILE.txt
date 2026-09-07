@@ -1,0 +1,829 @@
+NEXAGRID SOURCE AND IN-TEXT CITATION GUIDE
+
+Purpose
+-------
+This file keeps academic references separate from README.md. It does not claim that every source was directly copied into the code. The source keys below identify credible guidance relevant to the design decisions in each file. Add only citations you genuinely relied on, using the citation style required by your institution.
+
+Suggested in-code form
+----------------------
+Use concise comments only where a design choice needs attribution, for example:
+// File validation follows allow-list and generated-name guidance (OWASP Foundation, 2026).
+Avoid adding ten repetitive comments to every file. The rubric assesses proper referencing, not comment volume.
+
+MASTER HARVARD REFERENCE LIST
+=============================
+
+R01  Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+
+R02  Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+
+R03  Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+
+R04  Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+
+R05  OWASP Foundation (2026) ‘File Upload Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html (Accessed: 25 August 2026).
+
+R06  OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+
+R07  Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+
+R08  Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+
+R09  Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+
+R10  Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+
+R11  Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+
+R12  Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+
+R13  Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+
+R14  Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+
+R15  Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+
+R16  Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+
+R17  Microsoft (2026) ‘Operator overloading’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading (Accessed: 6 September 2026).
+
+R18  Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+
+R19  Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+
+R20  Microsoft (2025) ‘Jagged arrays’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#jagged-arrays (Accessed: 23 August 2026).
+
+R21  Microsoft (2025) ‘Recursive procedures’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/procedures/recursive-procedures (Accessed: 24 August 2026).
+
+R22  Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+
+R23  Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+R24  Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+
+R25  Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+R26  Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+R27  Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+R28  Microsoft (2026) ‘Unit testing C# in .NET using dotnet test and xUnit’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit (Accessed: 31 August 2026).
+
+SOURCE MAPPING BY CODE FILE
+===========================
+
+src/NexaGrid.API/Controllers/AttachmentsController.cs
+-----------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+
+src/NexaGrid.API/Controllers/SensorsController.cs
+-------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+
+src/NexaGrid.API/Controllers/TelemetryController.cs
+---------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+
+src/NexaGrid.API/Data/Migrations/20260904131624_InitialCreate.Designer.cs
+-------------------------------------------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.API/Data/Migrations/20260904131624_InitialCreate.cs
+----------------------------------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.API/Data/Migrations/NexaGridDbContextModelSnapshot.cs
+------------------------------------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.API/Data/NexaGridDbContext.cs
+------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Program.cs
+---------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Repositories/AttachmentRepository.cs
+-----------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Repositories/IAttachmentRepository.cs
+------------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Repositories/ISensorRepository.cs
+--------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Repositories/ITelemetryRepository.cs
+-----------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Repositories/SensorRepository.cs
+-------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Repositories/TelemetryRepository.cs
+----------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.API/Services/AttachmentDownloadResult.cs
+-----------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R05: OWASP Foundation (2026) ‘File Upload Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html (Accessed: 25 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.API/Services/AttachmentService.cs
+----------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R05: OWASP Foundation (2026) ‘File Upload Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html (Accessed: 25 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.API/Services/IAttachmentService.cs
+-----------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R05: OWASP Foundation (2026) ‘File Upload Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html (Accessed: 25 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.API/Services/ISensorService.cs
+-------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+
+src/NexaGrid.API/Services/ITelemetryService.cs
+----------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+
+src/NexaGrid.API/Services/SensorService.cs
+------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+
+src/NexaGrid.API/Services/TelemetryService.cs
+---------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+
+src/NexaGrid.Desktop/Controls/NetworkHeroVisual.cs
+--------------------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Controls/PillarCard.cs
+-------------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Controls/RoundedPanel.cs
+---------------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Controls/TelemetryChartControl.cs
+------------------------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Forms/AttachmentWorkspaceForm.cs
+-----------------------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Forms/MainForm.cs
+--------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Forms/SensorWorkspaceForm.cs
+-------------------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Forms/TelemetryWorkspaceForm.cs
+----------------------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Program.cs
+-------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+
+src/NexaGrid.Desktop/Services/ApiClient.cs
+------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.Desktop/Services/ApiException.cs
+---------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.Desktop/Services/AttachmentApiService.cs
+-----------------------------------------------------
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R05: OWASP Foundation (2026) ‘File Upload Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html (Accessed: 25 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.Desktop/Services/SensorApiService.cs
+-------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.Desktop/Services/TelemetryApiService.cs
+----------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R04: Microsoft (2026) ‘Upload files in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-10.0 (Accessed: 24 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R24: Microsoft (2026) ‘IFormFile interface’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile?view=aspnetcore-10.0 (Accessed: 27 August 2026).
+R25: Microsoft (2026) ‘FileStream class’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-10.0 (Accessed: 28 August 2026).
+
+src/NexaGrid.Desktop/Theme/AppFonts.cs
+--------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Desktop/Theme/AppPalette.cs
+----------------------------------------
+R12: Microsoft (2025) ‘Position and layout of controls in Windows Forms’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/layout (Accessed: 1 September 2026).
+R13: Microsoft (2025) ‘Best practices for the TableLayoutPanel control’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/best-practices-for-the-tablelayoutpanel-control (Accessed: 2 September 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+
+src/NexaGrid.Shared/DTOs/ApiResponse.cs
+---------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/DTOs/IngestTelemetryRequest.cs
+--------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/DTOs/RegisterSensorRequest.cs
+-------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/DTOs/SensorAttachmentResponse.cs
+----------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/DTOs/SensorResponse.cs
+------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/DTOs/TelemetryResponse.cs
+---------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/DTOs/TelemetrySeedResponse.cs
+-------------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Enums/SensorCategory.cs
+-------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Enums/SensorStatus.cs
+-----------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Enums/TelemetryDataType.cs
+----------------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R15: Microsoft (2026) ‘System.Net.Http.Json namespace’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json?view=net-10.0 (Accessed: 4 September 2026).
+R16: Microsoft (2026) ‘How to deserialize JSON in C#’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization (Accessed: 5 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Generics/SensorMeasurement.cs
+-------------------------------------------------
+R17: Microsoft (2026) ‘Operator overloading’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading (Accessed: 6 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R20: Microsoft (2025) ‘Jagged arrays’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#jagged-arrays (Accessed: 23 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+
+src/NexaGrid.Shared/Generics/TelemetryPacket.cs
+-----------------------------------------------
+R17: Microsoft (2026) ‘Operator overloading’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading (Accessed: 6 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R20: Microsoft (2025) ‘Jagged arrays’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#jagged-arrays (Accessed: 23 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+
+src/NexaGrid.Shared/Models/DeploymentNode.cs
+--------------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Models/Device.cs
+------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Models/Sensor.cs
+------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Models/SensorAttachment.cs
+----------------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Models/TelemetryRecord.cs
+---------------------------------------------
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R08: Microsoft (2026) ‘Microsoft SQL Server EF Core database provider’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/providers/sql-server/ (Accessed: 28 August 2026).
+R10: Microsoft (2026) ‘Migrations overview’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/ (Accessed: 30 August 2026).
+R11: Microsoft (2026) ‘Introduction to relationships’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/modeling/relationships (Accessed: 31 August 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R27: Microsoft (2026) ‘Enumeration types’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum (Accessed: 30 August 2026).
+
+src/NexaGrid.Shared/Structures/DeploymentTreeValidator.cs
+---------------------------------------------------------
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R17: Microsoft (2026) ‘Operator overloading’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading (Accessed: 6 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R20: Microsoft (2025) ‘Jagged arrays’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#jagged-arrays (Accessed: 23 August 2026).
+R21: Microsoft (2025) ‘Recursive procedures’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/procedures/recursive-procedures (Accessed: 24 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+
+src/NexaGrid.Shared/Structures/TelemetryBatchProcessor.cs
+---------------------------------------------------------
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R17: Microsoft (2026) ‘Operator overloading’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading (Accessed: 6 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R20: Microsoft (2025) ‘Jagged arrays’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#jagged-arrays (Accessed: 23 August 2026).
+R21: Microsoft (2025) ‘Recursive procedures’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/procedures/recursive-procedures (Accessed: 24 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+
+src/NexaGrid.Shared/Structures/TelemetryBuffer.cs
+-------------------------------------------------
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R17: Microsoft (2026) ‘Operator overloading’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading (Accessed: 6 September 2026).
+R18: Microsoft (2026) ‘Generics in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/ (Accessed: 21 August 2026).
+R19: Microsoft (2026) ‘Generic collections in .NET’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections (Accessed: 22 August 2026).
+R20: Microsoft (2025) ‘Jagged arrays’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#jagged-arrays (Accessed: 23 August 2026).
+R21: Microsoft (2025) ‘Recursive procedures’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/procedures/recursive-procedures (Accessed: 24 August 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R26: Microsoft (2026) ‘Records’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record (Accessed: 29 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+
+tests/NexaGrid.API.Tests/UnitTest1.cs
+-------------------------------------
+R01: Microsoft (2026) ‘Create web APIs with ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0 (Accessed: 21 August 2026).
+R02: Microsoft (2026) ‘Dependency injection in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-10.0 (Accessed: 22 August 2026).
+R03: Microsoft (2026) ‘Model binding in ASP.NET Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-10.0 (Accessed: 23 August 2026).
+R06: OWASP Foundation (2026) ‘Input Validation Cheat Sheet’. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 26 August 2026).
+R07: Microsoft (2026) ‘DbContext lifetime, configuration, and initialization’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/ (Accessed: 27 August 2026).
+R09: Microsoft (2026) ‘Asynchronous programming with EF Core’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/ef/core/miscellaneous/async (Accessed: 29 August 2026).
+R14: Microsoft (2025) ‘Asynchronous programming scenarios’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios (Accessed: 3 September 2026).
+R22: Microsoft (2026) ‘Validation attributes’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute (Accessed: 25 August 2026).
+R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads (Accessed: 26 August 2026).
+R28: Microsoft (2026) ‘Unit testing C# in .NET using dotnet test and xUnit’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit (Accessed: 31 August 2026).
+
+
