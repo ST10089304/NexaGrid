@@ -125,7 +125,7 @@ public class TelemetryService : ITelemetryService
         if (count is < 1 or > 10_000)
         {
             throw new ArgumentException(
-                "The seed count must be between 1 and 10,000.");
+                "The generated reading count must be between 1 and 10,000.");
         }
 
         Sensor? sensor =
@@ -144,20 +144,15 @@ public class TelemetryService : ITelemetryService
         DateTime startedAtUtc = DateTime.UtcNow;
         var stopwatch = Stopwatch.StartNew();
 
-        // Custom circular data structure containing only
-        // the latest dashboard readings.
         var recentBuffer =
             new TelemetryBuffer<TelemetryPacket<float>>(
                 Math.Min(count, 1_000));
 
-        // Preallocate the list to avoid repeated resizing.
         var generatedPackets =
             new List<TelemetryPacket<float>>(count);
 
         for (int index = 0; index < count; index++)
         {
-            // Generate one anomalous reading after every
-            // twenty-five normal readings.
             bool createAnomaly =
                 index > 0 && index % 25 == 0;
 
@@ -167,12 +162,10 @@ public class TelemetryService : ITelemetryService
 
             var packet = new TelemetryPacket<float>
             {
-                SensorIdentifier =
-                    sensor.UniqueIdentifier,
+                SensorIdentifier = sensor.UniqueIdentifier,
                 Value = MathF.Round(value, 2),
                 Unit = "Celsius",
-                RecordedAtUtc =
-                    startedAtUtc.AddSeconds(index),
+                RecordedAtUtc = startedAtUtc.AddSeconds(index),
                 IsAnomaly = createAnomaly
             };
 
@@ -180,14 +173,11 @@ public class TelemetryService : ITelemetryService
             recentBuffer.Add(packet);
         }
 
-        // Store the generated readings in sequential
-        // jagged-array batches.
         TelemetryPacket<float>[][] jaggedBatches =
             TelemetryBatchProcessor.CreateBatches(
                 generatedPackets,
                 batchSize);
 
-        // Transfer the arrays into an optimised generic collection.
         List<TelemetryPacket<float>> optimisedPackets =
             TelemetryBatchProcessor.FlattenToList(
                 jaggedBatches);
@@ -197,8 +187,7 @@ public class TelemetryService : ITelemetryService
                 .Select(packet => new TelemetryRecord
                 {
                     SensorId = sensor.Id,
-                    DataType =
-                        TelemetryDataType.Float.ToString(),
+                    DataType = TelemetryDataType.Float.ToString(),
                     Value = packet.Value.ToString(
                         CultureInfo.InvariantCulture),
                     Unit = packet.Unit,
@@ -226,18 +215,16 @@ public class TelemetryService : ITelemetryService
 
         return new TelemetrySeedResponse
         {
-            SensorIdentifier =
-                sensor.UniqueIdentifier,
+            SensorIdentifier = sensor.UniqueIdentifier,
             RequestedReadingCount = count,
             CreatedReadingCount = records.Count,
             BatchCount = jaggedBatches.Length,
             BatchSize = batchSize,
             AnomalyCount = records.Count(
                 record => record.IsAnomaly),
-            ProcessingTimeMilliseconds =
-                Math.Round(
-                    stopwatch.Elapsed.TotalMilliseconds,
-                    2),
+            ProcessingTimeMilliseconds = Math.Round(
+                stopwatch.Elapsed.TotalMilliseconds,
+                2),
             StartedAtUtc = startedAtUtc,
             CompletedAtUtc = DateTime.UtcNow
         };
@@ -273,7 +260,8 @@ public class TelemetryService : ITelemetryService
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
     {
-        if (!request.Value.TryGetSingle(out float value))
+        if (request.Value.ValueKind != JsonValueKind.Number
+            || !request.Value.TryGetSingle(out float value))
         {
             throw new ArgumentException(
                 "The telemetry value must be a valid float.");
@@ -305,7 +293,8 @@ public class TelemetryService : ITelemetryService
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
     {
-        if (!request.Value.TryGetInt32(out int value))
+        if (request.Value.ValueKind != JsonValueKind.Number
+            || !request.Value.TryGetInt32(out int value))
         {
             throw new ArgumentException(
                 "The telemetry value must be a valid integer.");
@@ -344,8 +333,7 @@ public class TelemetryService : ITelemetryService
                 "The telemetry value must be true or false.");
         }
 
-        bool value =
-            request.Value.GetBoolean();
+        bool value = request.Value.GetBoolean();
 
         var packet = new TelemetryPacket<bool>
         {
@@ -359,8 +347,8 @@ public class TelemetryService : ITelemetryService
         };
 
         packet.IsAnomaly =
-            request.ExpectedBooleanValue.HasValue &&
-            value != request.ExpectedBooleanValue.Value;
+            request.ExpectedBooleanValue.HasValue
+            && value != request.ExpectedBooleanValue.Value;
 
         return new ProcessedTelemetry(
             packet.Value
@@ -375,12 +363,12 @@ public class TelemetryService : ITelemetryService
         double? maximum)
     {
         bool belowMinimum =
-            minimum.HasValue &&
-            value < minimum.Value;
+            minimum.HasValue
+            && value < minimum.Value;
 
         bool aboveMaximum =
-            maximum.HasValue &&
-            value > maximum.Value;
+            maximum.HasValue
+            && value > maximum.Value;
 
         return belowMinimum || aboveMaximum;
     }
@@ -399,7 +387,9 @@ public class TelemetryService : ITelemetryService
             Id = record.Id,
             SensorId = record.SensorId,
             SensorIdentifier =
-                sensorIdentifier.Trim().ToUpperInvariant(),
+                sensorIdentifier
+                    .Trim()
+                    .ToUpperInvariant(),
             DataType = dataType,
             Value = record.Value,
             Unit = record.Unit,
