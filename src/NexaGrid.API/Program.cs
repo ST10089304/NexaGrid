@@ -92,6 +92,8 @@ builder.Services.Configure<FormOptions>(
 
 builder.Services.AddOpenApi();
 
+builder.Services.AddSingleton<ICommandQueueService, CommandQueueService>();
+
 var app = builder.Build();
 
 // =========================================================
