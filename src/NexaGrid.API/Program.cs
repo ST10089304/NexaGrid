@@ -96,6 +96,8 @@ builder.Services.AddSingleton<ICommandQueueService, CommandQueueService>();
 
 builder.Services.AddSingleton<IOperationalLookupService, OperationalLookupService>();
 
+builder.Services.AddSingleton<IPredictiveActionService, PredictiveActionService>();
+
 var app = builder.Build();
 
 // =========================================================
