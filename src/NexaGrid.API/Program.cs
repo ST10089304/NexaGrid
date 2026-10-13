@@ -94,6 +94,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddSingleton<ICommandQueueService, CommandQueueService>();
 
+builder.Services.AddSingleton<IOperationalLookupService, OperationalLookupService>();
+
 var app = builder.Build();
 
 // =========================================================
