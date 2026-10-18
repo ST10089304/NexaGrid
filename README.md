@@ -1,6 +1,6 @@
 # NexaGrid IoT Operations Platform
 
-NexaGrid is a Part 1 implementation of a Smart-X IoT operations platform. It combines a Windows Forms desktop client, an ASP.NET Core Web API, shared strongly typed contracts, Entity Framework Core, and SQL Server to register sensors, ingest and analyse telemetry, and manage sensor evidence attachments.
+NexaGrid is a Smart-X IoT operations platform developed across Parts 1 and 2 of the PROG7312 POE. It combines a Windows Forms desktop client, an ASP.NET Core Web API, shared strongly typed contracts, Entity Framework Core and SQL Server. The platform supports sensor and gateway registration, telemetry ingestion and anomaly analysis, secure evidence attachments, prioritised device-command processing, command undo history, operational node tracking and personalised predictive actions.
 
 ## Part 1 capabilities
 
@@ -13,6 +13,21 @@ NexaGrid is a Part 1 implementation of a Smart-X IoT operations platform. It com
 - Jagged-array telemetry batching and recursive deployment-tree validation
 - Securely constrained attachment upload, listing, download, and open workflows
 - Immediate user feedback, loading states, validation messages, and API error handling
+
+## Part 2 capabilities
+
+- Real-time device-command submission and processing
+- FIFO processing for standard commands using `Queue<T>`
+- Priority processing for critical and high-priority commands using `PriorityQueue<TElement, TPriority>`
+- LIFO command undo history using `Stack<T>`
+- Fast device lookup using `Dictionary<TKey, TValue>`
+- Chronological telemetry tracking using `SortedDictionary<TKey, TValue>`
+- Unique disconnected-node tracking using `HashSet<T>`
+- Operator-activity recording and personalised predictive suggestions
+- Active-alert triage recommendations based on current operational conditions
+- Responsive command-stream workspace for pending and processed commands
+- Command processing, history and undo controls in the desktop application
+- Automated tests for queue ordering, operational lookup and predictive rules
 
 ## Solution architecture
 
