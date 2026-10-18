@@ -153,7 +153,7 @@ public sealed class MainForm : Form
             new Label
             {
                 Text =
-                    "PART 1 / DATA INGESTION GATEWAY",
+                        "PART 2 / REAL-TIME PROCESSING",
                 ForeColor =
                     AppPalette.LightGray,
                 Font =
@@ -226,6 +226,15 @@ public sealed class MainForm : Form
             (_, _) =>
                 OpenTelemetryWorkspace();
 
+Button commandStreamButton =
+    CreateNavigationButton(
+        "COMMANDS",
+        315);
+
+commandStreamButton.Click +=
+    (_, _) =>
+        OpenCommandStreamWorkspace();
+        
         var brandButton =
             new Button
             {
@@ -290,6 +299,8 @@ public sealed class MainForm : Form
 
         panel.Controls.Add(
             telemetryButton);
+        panel.Controls.Add(
+            commandStreamButton);
 
         panel.Controls.Add(
             brandButton);
@@ -632,21 +643,25 @@ public sealed class MainForm : Form
             (_, _) =>
                 OpenSensorWorkspace();
 
-        var commandCard =
-            new PillarCard(
-                IconChar.SatelliteDish,
-                "02 / PART TWO",
-                "Command stream",
-                "Transmit device instructions and maintain an operational command history.",
-                false)
-            {
-                Margin =
-                    new Padding(
-                        5,
-                        0,
-                        5,
-                        0)
-            };
+     var commandCard =
+    new PillarCard(
+        IconChar.SatelliteDish,
+        "02 / ACTIVE",
+        "Command stream",
+        "Transmit device instructions and maintain an operational command history.",
+        true)
+    {
+        Margin =
+            new Padding(
+                5,
+                0,
+                5,
+                0)
+    };
+
+commandCard.OpenRequested +=
+    (_, _) =>
+        OpenCommandStreamWorkspace();
 
         var topologyCard =
             new PillarCard(
@@ -699,6 +714,12 @@ public sealed class MainForm : Form
         OpenWorkspace(
             () => new AttachmentWorkspaceForm());
     }
+
+    private void OpenCommandStreamWorkspace()
+{
+    OpenWorkspace(
+        () => new CommandStreamWorkspaceForm());
+}
 
     private void OpenWorkspace(
         Func<Form> createWorkspace)
