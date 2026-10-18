@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Shared.DTOs.Predictive;
-
+/*(C# Corner, 2020; Tutlane, 2019)*/
 public sealed class PredictiveSuggestionResponse
 {
     public string Code { get; set; } = string.Empty;

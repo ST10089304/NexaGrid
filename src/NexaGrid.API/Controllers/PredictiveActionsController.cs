@@ -4,7 +4,9 @@ using NexaGrid.Shared.DTOs;
 using NexaGrid.Shared.DTOs.Predictive;
 
 namespace NexaGrid.API.Controllers;
-
+// ASP.NET Core controller routing, model binding and typed action results follow
+// Microsoft guidance for controller-based web APIs (Microsoft, 2026a; Microsoft, 2026b)
+/*Halvorsen, H. P. (2020)*/
 [ApiController]
 [Route("api/predictive-actions")]
 public sealed class PredictiveActionsController : ControllerBase
@@ -16,7 +18,7 @@ public sealed class PredictiveActionsController : ControllerBase
     {
         _predictiveActionService = predictiveActionService;
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpPost("activity")]
     [ProducesResponseType(
         typeof(ApiResponse<int>),
@@ -48,7 +50,7 @@ public sealed class PredictiveActionsController : ControllerBase
                     exception.Message));
         }
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpGet("suggestions")]
     [ProducesResponseType(
         typeof(ApiResponse<

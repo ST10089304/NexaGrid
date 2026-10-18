@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Shared.DTOs.CommandStream;
-
+/*(C# Corner, 2020; Tutlane, 2019)*/
 public sealed class DeviceCommandResponse
 {
     public Guid Id { get; set; }

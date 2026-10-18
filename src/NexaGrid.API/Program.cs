@@ -8,7 +8,8 @@ using NexaGrid.API.Repositories;
 using NexaGrid.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// Part 2 services are registered through ASP.NET Core dependency injection
+// so controllers depend on abstractions rather than concrete construction (Microsoft, 2026c).
 // =========================================================
 // Controllers and JSON
 // =========================================================

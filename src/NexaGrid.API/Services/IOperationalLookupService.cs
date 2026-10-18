@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public interface IOperationalLookupService
 {
     int CachedDeviceCount { get; }

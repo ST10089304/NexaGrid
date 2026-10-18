@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Shared.Commands;
-
+/* OWASP Foundation (2026) */
 public sealed class DeviceCommand
 {
     public Guid Id { get; init; } = Guid.NewGuid();

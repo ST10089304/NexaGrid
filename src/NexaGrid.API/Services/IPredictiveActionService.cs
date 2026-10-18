@@ -1,7 +1,7 @@
 using NexaGrid.Shared.DTOs.Predictive;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public interface IPredictiveActionService
 {
     void RecordActivity(RecordUserActivityRequest request);

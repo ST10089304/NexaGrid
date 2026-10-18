@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Shared.DTOs.CommandStream;
-
+/*(C# Corner, 2020; Tutlane, 2019)*/
 public sealed class IssueDeviceCommandRequest
 {
     [Required(ErrorMessage = "The target identifier is required.")]

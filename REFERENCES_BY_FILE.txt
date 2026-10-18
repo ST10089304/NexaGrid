@@ -869,3 +869,79 @@ R23: Microsoft (2026) ‘Cancellation in managed threads’. Microsoft Learn. Av
 R28: Microsoft (2026) ‘Unit testing C# in .NET using dotnet test and xUnit’. Microsoft Learn. Available at: https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit (Accessed: 31 August 2026).
 
 
+PART 2 REFERENCE LIST
+
+Microsoft (2026a) Create web APIs with ASP.NET Core. Available at:
+https://learn.microsoft.com/en-us/aspnet/core/web-api/
+(Accessed: 18 October 2026).
+
+Microsoft (2026b) Controller action return types in ASP.NET Core Web API.
+Available at:
+https://learn.microsoft.com/en-us/aspnet/core/web-api/action-return-types
+(Accessed: 18 October 2026).
+
+Microsoft (2026c) Dependency injection in ASP.NET Core. Available at:
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
+(Accessed: 18 October 2026).
+
+Microsoft (2026d) PriorityQueue<TElement,TPriority> Class. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2
+(Accessed: 18 October 2026).
+
+Microsoft (2026e) Queue<T> Class. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.queue-1
+(Accessed: 18 October 2026).
+
+Microsoft (2026f) Stack<T> Class. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.stack-1
+(Accessed: 18 October 2026).
+
+Microsoft (2026g) Dictionary<TKey,TValue> Class. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2
+(Accessed: 18 October 2026).
+
+Microsoft (2026h) SortedDictionary<TKey,TValue> Class. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.sorteddictionary-2
+(Accessed: 18 October 2026).
+
+Microsoft (2026i) HashSet<T> Class. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1
+(Accessed: 18 October 2026).
+
+Microsoft (2026j) Thread-safe collections. Available at:
+https://learn.microsoft.com/en-us/dotnet/standard/collections/thread-safe/
+(Accessed: 18 October 2026).
+
+Microsoft (2026k) Grouping data. Available at:
+https://learn.microsoft.com/en-us/dotnet/csharp/linq/standard-query-operators/grouping-data
+(Accessed: 18 October 2026).
+
+Microsoft (2026l) Model validation in ASP.NET Core MVC and Razor Pages.
+Available at:
+https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation
+(Accessed: 18 October 2026).
+
+Microsoft (2026m) HttpClient Class. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient
+(Accessed: 18 October 2026).
+
+Microsoft (2026n) HTTP client extensions for JSON. Available at:
+https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json.httpclientjsonextensions
+(Accessed: 18 October 2026).
+
+Microsoft (2026o) TableLayoutPanel Control – Windows Forms. Available at:
+https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/tablelayoutpanel-control-windows-forms
+(Accessed: 18 October 2026).
+
+Microsoft (2026p) How to handle cross-thread operations with controls –
+Windows Forms. Available at:
+https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-make-thread-safe-calls
+(Accessed: 18 October 2026).
+
+Microsoft (2026q) Events overview – Windows Forms. Available at:
+https://learn.microsoft.com/en-us/dotnet/desktop/winforms/forms/events
+(Accessed: 18 October 2026).
+
+xUnit.net (2026) Getting started with xUnit.net v3. Available at:
+https://xunit.net/docs/getting-started/v3/getting-started
+(Accessed: 18 October 2026).

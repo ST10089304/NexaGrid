@@ -2,7 +2,7 @@ using NexaGrid.Shared.DTOs.Predictive;
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public sealed class PredictiveActionService : IPredictiveActionService
 {
     private const int SuggestionThreshold = 3;
@@ -14,13 +14,13 @@ public sealed class PredictiveActionService : IPredictiveActionService
         string,
         Dictionary<string, ActivityPattern>> _operatorPatterns =
         new(StringComparer.OrdinalIgnoreCase);
-
+/*CodeProject (2018)*/
     public PredictiveActionService(
         IOperationalLookupService operationalLookupService)
     {
         _operationalLookupService = operationalLookupService;
     }
-
+/*CodeProject (2018)*/
     public void RecordActivity(RecordUserActivityRequest request)
     {
         ArgumentNullException.ThrowIfNull(request);
@@ -67,7 +67,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             pattern.LastOccurredAtUtc = request.OccurredAtUtc;
         }
     }
-
+/*CodeProject (2018)*/
     public IReadOnlyList<PredictiveSuggestionResponse> GenerateSuggestions(
         string operatorIdentifier,
         int activeAlertCount = 0)
@@ -105,7 +105,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             .ThenBy(suggestion => suggestion.Title)
             .ToArray();
     }
-
+/*CodeProject (2018)*/
     public int GetRecordedActivityCount(string operatorIdentifier)
     {
         if (string.IsNullOrWhiteSpace(operatorIdentifier))
@@ -125,7 +125,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             return patterns.Values.Sum(pattern => pattern.Count);
         }
     }
-
+/*CodeProject (2018)*/
     private void AddDisconnectedNodeSuggestions(
         ICollection<PredictiveSuggestionResponse> suggestions)
     {
@@ -148,7 +148,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             });
         }
     }
-
+/*CodeProject (2018)*/
     private static void AddAlertSuggestion(
         ICollection<PredictiveSuggestionResponse> suggestions,
         int activeAlertCount)
@@ -171,7 +171,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             SupportingActivityCount = activeAlertCount
         });
     }
-
+/*CodeProject (2018)*/
     private static PredictiveSuggestionResponse CreatePatternSuggestion(
         ActivityPattern pattern)
     {
@@ -187,7 +187,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
                 "Unsupported user activity type.")
         };
     }
-
+/*CodeProject (2018)*/
     private static PredictiveSuggestionResponse CreateSearchSuggestion(
         ActivityPattern pattern)
     {
@@ -205,7 +205,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             SupportingActivityCount = pattern.Count
         };
     }
-
+/*CodeProject (2018)*/
     private static PredictiveSuggestionResponse CreateCommandSuggestion(
         ActivityPattern pattern)
     {
@@ -235,7 +235,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             SupportingActivityCount = pattern.Count
         };
     }
-
+/*CodeProject (2018)*/
     private static string CreatePatternKey(
         UserActivityType activityType,
         string activityValue,
@@ -247,7 +247,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
             activityValue,
             targetIdentifier ?? string.Empty);
     }
-
+/*CodeProject (2018)*/
     private static string CreateCodeValue(string value)
     {
         return value
@@ -255,14 +255,14 @@ public sealed class PredictiveActionService : IPredictiveActionService
             .Replace(' ', '-')
             .ToUpperInvariant();
     }
-
+/*CodeProject (2018)*/
     private static double CalculateConfidence(int activityCount)
     {
         return Math.Min(
             0.99,
             0.55 + activityCount * 0.08);
     }
-
+/*CodeProject (2018)*/
     private static string NormalizeRequired(
         string value,
         string parameterName)
@@ -276,7 +276,7 @@ public sealed class PredictiveActionService : IPredictiveActionService
 
         return value.Trim();
     }
-
+/*CodeProject (2018)*/
     private sealed class ActivityPattern
     {
         public UserActivityType ActivityType { get; init; }

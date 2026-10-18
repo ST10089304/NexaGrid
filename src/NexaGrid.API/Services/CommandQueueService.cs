@@ -2,7 +2,10 @@ using NexaGrid.Shared.Commands;
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.API.Services;
-
+// Queue<T> provides FIFO processing, PriorityQueue<TElement, TPriority>
+// prioritises urgent commands, and Stack<T> supports last-in-first-out undo
+// history (Microsoft, 2026d; Microsoft, 2026e; Microsoft, 2026f).
+/*CodeProject (2018)*/
 public sealed class CommandQueueService : ICommandQueueService
 {
     private readonly Lock _syncRoot = new();
@@ -60,7 +63,9 @@ public sealed class CommandQueueService : ICommandQueueService
             _standardQueue.Enqueue(command);
         }
     }
-
+// Urgent commands are dequeued before standard FIFO commands using the
+// priority queue's lowest-priority-value-first behaviour (Microsoft, 2026d).
+/*CodeProject (2018)*/
     public bool TryDequeue(out DeviceCommand? command)
     {
         lock (_syncRoot)

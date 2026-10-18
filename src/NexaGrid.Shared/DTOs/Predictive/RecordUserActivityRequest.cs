@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.Shared.DTOs.Predictive;
-
+/*(C# Corner, 2020; Tutlane, 2019)*/
 public sealed class RecordUserActivityRequest
 {
     [Required(ErrorMessage = "The operator identifier is required.")]

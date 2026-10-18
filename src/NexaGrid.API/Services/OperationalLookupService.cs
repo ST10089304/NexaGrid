@@ -1,7 +1,7 @@
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Services;
-
+/*CodeProject (2018)*/
 public sealed class OperationalLookupService : IOperationalLookupService
 {
     private readonly Lock _syncRoot = new();
@@ -14,7 +14,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
 
     private readonly HashSet<string> _disconnectedNodes =
         new(StringComparer.OrdinalIgnoreCase);
-
+/*CodeProject (2018)*/
     public int CachedDeviceCount
     {
         get
@@ -25,7 +25,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             }
         }
     }
-
+/*CodeProject (2018)*/
     public int TimelineCount
     {
         get
@@ -36,7 +36,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             }
         }
     }
-
+/*CodeProject (2018)*/
     public int DisconnectedNodeCount
     {
         get
@@ -47,7 +47,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             }
         }
     }
-
+/*CodeProject (2018)*/
     public void CacheDevice(Device device)
     {
         ArgumentNullException.ThrowIfNull(device);
@@ -66,7 +66,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             _deviceCache[macAddress] = device;
         }
     }
-
+/*CodeProject (2018)*/
     public bool TryGetDevice(string macAddress, out Device? device)
     {
         if (string.IsNullOrWhiteSpace(macAddress))
@@ -80,7 +80,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             return _deviceCache.TryGetValue(macAddress.Trim(), out device);
         }
     }
-
+/*CodeProject (2018)*/
     public void RecordTelemetry(TelemetryRecord record)
     {
         ArgumentNullException.ThrowIfNull(record);
@@ -97,7 +97,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             _telemetryTimeline.Add(timelineKey, record);
         }
     }
-
+/*CodeProject (2018)*/
     public IReadOnlyList<TelemetryRecord> GetTelemetryTimeline(
         DateTime? fromUtc = null,
         DateTime? toUtc = null)
@@ -122,7 +122,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
                 .ToArray();
         }
     }
-
+/*CodeProject (2018)*/
     public bool MarkDisconnected(string nodeIdentifier)
     {
         var normalizedIdentifier = NormalizeIdentifier(nodeIdentifier);
@@ -132,7 +132,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             return _disconnectedNodes.Add(normalizedIdentifier);
         }
     }
-
+/*CodeProject (2018)*/
     public bool MarkConnected(string nodeIdentifier)
     {
         var normalizedIdentifier = NormalizeIdentifier(nodeIdentifier);
@@ -142,7 +142,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             return _disconnectedNodes.Remove(normalizedIdentifier);
         }
     }
-
+/*CodeProject (2018)*/
     public bool IsDisconnected(string nodeIdentifier)
     {
         if (string.IsNullOrWhiteSpace(nodeIdentifier))
@@ -155,7 +155,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
             return _disconnectedNodes.Contains(nodeIdentifier.Trim());
         }
     }
-
+/*CodeProject (2018)*/
     public IReadOnlyList<string> GetDisconnectedNodes()
     {
         lock (_syncRoot)
@@ -165,7 +165,7 @@ public sealed class OperationalLookupService : IOperationalLookupService
                 .ToArray();
         }
     }
-
+/*CodeProject (2018)*/
     private static string NormalizeIdentifier(string nodeIdentifier)
     {
         if (string.IsNullOrWhiteSpace(nodeIdentifier))

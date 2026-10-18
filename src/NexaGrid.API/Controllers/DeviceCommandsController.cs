@@ -7,7 +7,9 @@ using NexaGrid.Shared.DTOs.Predictive;
 using NexaGrid.Shared.Enums;
 
 namespace NexaGrid.API.Controllers;
-
+// ASP.NET Core controller routing, model binding and typed action results follow
+// Microsoft guidance for controller-based web APIs (Microsoft, 2026a; Microsoft, 2026b).
+/*Halvorsen, H. P. (2020)*/
 [ApiController]
 [Route("api/device-commands")]
 public sealed class DeviceCommandsController : ControllerBase
@@ -22,7 +24,7 @@ public sealed class DeviceCommandsController : ControllerBase
         _commandQueueService = commandQueueService;
         _predictiveActionService = predictiveActionService;
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpPost]
     [ProducesResponseType(
         typeof(ApiResponse<DeviceCommandResponse>),
@@ -79,7 +81,7 @@ public sealed class DeviceCommandsController : ControllerBase
                     exception.Message));
         }
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpGet("pending")]
     [ProducesResponseType(
         typeof(ApiResponse<
@@ -99,7 +101,7 @@ public sealed class DeviceCommandsController : ControllerBase
                 commands,
                 $"{commands.Count} pending device command(s) retrieved."));
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpPost("process-next")]
     [ProducesResponseType(
         typeof(ApiResponse<DeviceCommandResponse>),
@@ -125,7 +127,7 @@ public sealed class DeviceCommandsController : ControllerBase
                 ToResponse(command),
                 "Device command processed successfully."));
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpPost("undo-last")]
     [ProducesResponseType(
         typeof(ApiResponse<DeviceCommandResponse>),
@@ -149,7 +151,7 @@ public sealed class DeviceCommandsController : ControllerBase
                 ToResponse(command),
                 "The most recently processed command was undone."));
     }
-
+/*Halvorsen, H. P. (2020)*/
     [HttpGet("history")]
     [ProducesResponseType(
         typeof(ApiResponse<
@@ -169,7 +171,7 @@ public sealed class DeviceCommandsController : ControllerBase
                 commands,
                 $"{commands.Count} processed device command(s) retrieved."));
     }
-
+/*Halvorsen, H. P. (2020)*/
     private static DeviceCommandResponse ToResponse(
         DeviceCommand command)
     {
