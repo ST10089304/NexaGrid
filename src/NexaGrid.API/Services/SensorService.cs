@@ -4,27 +4,44 @@ using NexaGrid.Shared.Enums;
 using NexaGrid.Shared.Models;
 
 namespace NexaGrid.API.Services;
-/*CodeProject (2018)*/
+
+/*
+ * Device lookup data is mirrored in an in-memory Dictionary keyed by MAC
+ * address for efficient operational access (Microsoft, 2026).
+ */
 public class SensorService : ISensorService
 {
     private readonly ISensorRepository _sensorRepository;
+    private readonly IOperationalLookupService _operationalLookupService;
 
-    public SensorService(ISensorRepository sensorRepository)
+    public SensorService(
+        ISensorRepository sensorRepository,
+        IOperationalLookupService operationalLookupService)
     {
         _sensorRepository = sensorRepository;
+        _operationalLookupService = operationalLookupService;
     }
-/*CodeProject (2018)*/
+
     public async Task<IReadOnlyList<SensorResponse>> GetAllAsync(
         CancellationToken cancellationToken = default)
     {
         List<Sensor> sensors =
             await _sensorRepository.GetAllAsync(cancellationToken);
 
+        foreach (Sensor sensor in sensors)
+        {
+            CacheDevice(sensor.Device);
+
+            SynchronizeConnectionState(
+                sensor.UniqueIdentifier,
+                sensor.Status);
+        }
+
         return sensors
             .Select(MapToResponse)
             .ToList();
     }
-/*CodeProject (2018)*/
+
     public async Task<SensorResponse?> GetByIdAsync(
         int id,
         CancellationToken cancellationToken = default)
@@ -34,15 +51,30 @@ public class SensorService : ISensorService
                 id,
                 cancellationToken);
 
-        return sensor is null ? null : MapToResponse(sensor);
+        if (sensor is null)
+        {
+            return null;
+        }
+
+        CacheDevice(sensor.Device);
+
+        SynchronizeConnectionState(
+            sensor.UniqueIdentifier,
+            sensor.Status);
+
+        return MapToResponse(sensor);
     }
-/*CodeProject (2018)*/
+
     public async Task<SensorResponse> RegisterAsync(
         RegisterSensorRequest request,
         CancellationToken cancellationToken = default)
     {
+        ArgumentNullException.ThrowIfNull(request);
+
         string normalizedIdentifier =
-            request.UniqueIdentifier.Trim().ToUpperInvariant();
+            request.UniqueIdentifier
+                .Trim()
+                .ToUpperInvariant();
 
         string normalizedMacAddress =
             request.MacAddress
@@ -100,9 +132,44 @@ public class SensorService : ISensorService
         await _sensorRepository.SaveChangesAsync(
             cancellationToken);
 
+        /*
+         * Populate the Part 2 Dictionary only after persistence succeeds.
+         * The sensor identifier is also removed from the disconnected HashSet.
+         */
+        _operationalLookupService.CacheDevice(device);
+        _operationalLookupService.MarkConnected(
+            sensor.UniqueIdentifier);
+
         return MapToResponse(sensor);
     }
-/*CodeProject (2018)*/
+
+    private void CacheDevice(Device? device)
+    {
+        if (device is null
+            || string.IsNullOrWhiteSpace(device.MacAddress))
+        {
+            return;
+        }
+
+        _operationalLookupService.CacheDevice(device);
+    }
+
+    private void SynchronizeConnectionState(
+        string sensorIdentifier,
+        SensorStatus status)
+    {
+        if (status == SensorStatus.Offline)
+        {
+            _operationalLookupService.MarkDisconnected(
+                sensorIdentifier);
+
+            return;
+        }
+
+        _operationalLookupService.MarkConnected(
+            sensorIdentifier);
+    }
+
     private static SensorResponse MapToResponse(Sensor sensor)
     {
         return new SensorResponse

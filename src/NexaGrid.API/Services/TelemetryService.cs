@@ -13,13 +13,17 @@ namespace NexaGrid.API.Services;
 public class TelemetryService : ITelemetryService
 {
     private readonly ITelemetryRepository _telemetryRepository;
+    private readonly IOperationalLookupService _operationalLookupService;
 
     public TelemetryService(
-        ITelemetryRepository telemetryRepository)
+        ITelemetryRepository telemetryRepository,
+        IOperationalLookupService operationalLookupService)
     {
         _telemetryRepository = telemetryRepository;
+        _operationalLookupService = operationalLookupService;
     }
-/*CodeProject (2018)*/
+
+    /*CodeProject (2018)*/
     public async Task<TelemetryResponse> IngestAsync(
         IngestTelemetryRequest request,
         CancellationToken cancellationToken = default)
@@ -74,11 +78,22 @@ public class TelemetryService : ITelemetryService
         await _telemetryRepository.SaveChangesAsync(
             cancellationToken);
 
+        /*
+         * The successfully persisted reading is mirrored into the
+         * timestamp-ordered Part 2 operational timeline.
+         * A successful reading confirms that the sensor is connected
+         * (Microsoft, 2026).
+         */
+        _operationalLookupService.RecordTelemetry(record);
+
+        _operationalLookupService.MarkConnected(
+            sensor.UniqueIdentifier);
+
         return MapToResponse(
             record,
             sensor.UniqueIdentifier);
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     public async Task<IReadOnlyList<TelemetryResponse>> GetRecentAsync(
         string sensorIdentifier,
         int limit,
@@ -110,7 +125,7 @@ public class TelemetryService : ITelemetryService
                         ?? sensorIdentifier))
             .ToList();
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     public async Task<TelemetrySeedResponse> SeedAsync(
         string sensorIdentifier,
         int count,
@@ -209,7 +224,19 @@ public class TelemetryService : ITelemetryService
             : SensorStatus.Online;
 
         await _telemetryRepository.SaveChangesAsync(
-            cancellationToken);
+     cancellationToken);
+
+        /*
+         * Seeded records are added to the SortedDictionary timeline only
+         * after the database transaction succeeds (Microsoft, 2026).
+         */
+        foreach (TelemetryRecord record in records)
+        {
+            _operationalLookupService.RecordTelemetry(record);
+        }
+
+        _operationalLookupService.MarkConnected(
+            sensor.UniqueIdentifier);
 
         stopwatch.Stop();
 
@@ -229,7 +256,7 @@ public class TelemetryService : ITelemetryService
             CompletedAtUtc = DateTime.UtcNow
         };
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessTypedValue(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -255,7 +282,7 @@ public class TelemetryService : ITelemetryService
                 "The telemetry data type is unsupported.")
         };
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessFloat(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -288,7 +315,7 @@ public class TelemetryService : ITelemetryService
                 CultureInfo.InvariantCulture),
             packet.IsAnomaly);
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessInteger(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -321,7 +348,7 @@ public class TelemetryService : ITelemetryService
                 CultureInfo.InvariantCulture),
             packet.IsAnomaly);
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     private static ProcessedTelemetry ProcessBoolean(
         IngestTelemetryRequest request,
         DateTime recordedAtUtc)
@@ -356,7 +383,7 @@ public class TelemetryService : ITelemetryService
                 .ToLowerInvariant(),
             packet.IsAnomaly);
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     private static bool IsOutsideRange(
         double value,
         double? minimum,
@@ -372,7 +399,7 @@ public class TelemetryService : ITelemetryService
 
         return belowMinimum || aboveMaximum;
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     private static TelemetryResponse MapToResponse(
         TelemetryRecord record,
         string sensorIdentifier)
@@ -400,7 +427,7 @@ public class TelemetryService : ITelemetryService
             RecordedAtUtc = record.RecordedAtUtc
         };
     }
-/*CodeProject (2018)*/
+    /*CodeProject (2018)*/
     private readonly record struct ProcessedTelemetry(
         string StoredValue,
         bool IsAnomaly);
